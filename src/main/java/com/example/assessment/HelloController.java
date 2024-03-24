@@ -31,7 +31,7 @@ public class HelloController {
     protected void signupClicked() throws IOException {
         // Will need to change the page here NOT IMPLEMENTED
         Stage stage = (Stage) signup_btn.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startup-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signup_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
@@ -40,8 +40,8 @@ public class HelloController {
     protected void loginClicked() throws IOException {
         // Authenticate user and change to main page. NOT IMPLEMENTED
         Stage stage = (Stage) login_btn.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startup-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main_view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), MainController.WIDTH, MainController.HEIGHT);
         stage.setScene(scene);
     }
 }

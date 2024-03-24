@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@start_stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.MainController">
+   <children>
+      <Text fx:id="title" layoutX="190.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StudyScheduler" textAlignment="CENTER" wrappingWidth="220.13671875">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <MenuBar layoutY="-1.0" prefHeight="25.0" prefWidth="79.0">
+        <menus>
+          <Menu fx:id="logout_menu" mnemonicParsing="false" onAction="#logoutClicked" text="Logout">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

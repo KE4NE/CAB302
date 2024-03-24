@@ -10,13 +10,13 @@ import java.io.IOException;
 public class HelloApplication extends Application {
 
     public static final int HEIGHT = 400;
-    public static final int WIDTH = 300;
+    public static final int WIDTH = 350;
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startup_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
-        stage.setTitle("StudyScheduler Sign In");
+        stage.setTitle("Sign In");
         stage.setScene(scene);
         stage.show();
     }

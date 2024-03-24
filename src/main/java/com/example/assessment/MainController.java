@@ -3,31 +3,28 @@ package com.example.assessment;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SignupController {
-    @FXML
-    private Label welcomeText;
+public class MainController {
+
+    public static final int WIDTH = 600;
+
+    public static final int HEIGHT = 400;
 
     @FXML
-    private TextField username;
+    private Menu logout_menu;
 
     @FXML
-    private PasswordField password;
+    private Text title;
 
     @FXML
-    private Button login_btn;
-
-    @FXML
-    protected void loginClicked() throws IOException {
+    protected void logoutClicked() throws IOException {
         // Will need to change the page here NOT IMPLEMENTED
-        Stage stage = (Stage) login_btn.getScene().getWindow();
+        Stage stage = (Stage) title.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startup_view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
