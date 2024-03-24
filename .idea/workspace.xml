@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c95927b-5d08-4e95-9161-5b52077b095d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/main_view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/SignupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/signup_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/signup_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +53,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Keane Asson/AppData/Local/SceneBuilder/SceneBuilder.exe",
+    "last_opened_file_path": "C:/Users/Keane Asson/Documents/QUT Y2/CAB302/src/main/resources/com/example/assessment",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,6 +64,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Keane Asson\Documents\QUT Y2\CAB302\src\main\resources\com\example\assessment" />
       <recent name="C:\Users\keane\Documents\QUT Y2\CAB302\Assessment Work\CAB302\src\main\resources\com\example\assessment" />
     </key>
   </component>
@@ -80,7 +85,7 @@
       <updated>1711192261580</updated>
       <workItem from="1711192262638" duration="53000" />
       <workItem from="1711199319815" duration="4662000" />
-      <workItem from="1711256621999" duration="5623000" />
+      <workItem from="1711256621999" duration="9324000" />
     </task>
     <servers />
   </component>
