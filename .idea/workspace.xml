@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5c95927b-5d08-4e95-9161-5b52077b095d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/signup_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/signup_view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/start_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/start_stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/startup_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/startup_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Keane Asson/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "node.js.detected.package.eslint": "true",
@@ -83,7 +80,7 @@
       <updated>1711192261580</updated>
       <workItem from="1711192262638" duration="53000" />
       <workItem from="1711199319815" duration="4662000" />
-      <workItem from="1711256621999" duration="4266000" />
+      <workItem from="1711256621999" duration="5623000" />
     </task>
     <servers />
   </component>
