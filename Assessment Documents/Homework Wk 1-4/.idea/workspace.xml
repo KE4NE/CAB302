@@ -1,29 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a56b5565-c4b4-4079-adcd-0ac9b2e9e54f" name="Changes" comment="" />
+    <list default="true" id="576278b5-f20b-4f9e-bb11-e1b5c36e4eef" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
+  "associatedIndex": 3
 }]]></component>
-  <component name="ProjectId" id="2e2v9RMO60fzY9mA4yUynE5WYjc" />
+  <component name="ProjectId" id="2e2vOrDindfHWQYI5ZiA9qNLENi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/keane/Documents/QUT Y2/CAB302/Homework/Homework V2/src/Main.java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Homework V2" />
+      <option name="PROGRAM_PARAMETERS" value="-start (0,7) -target (7,2) -g (6,2) -f (2,0,2,5) (0,3,4,3) (6,3,7,3) -s (1,4,2.5) -c (4,2,w) (4,7,e) " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -34,12 +65,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a56b5565-c4b4-4079-adcd-0ac9b2e9e54f" name="Changes" comment="" />
-      <created>1711115340817</created>
+      <changelist id="576278b5-f20b-4f9e-bb11-e1b5c36e4eef" name="Changes" comment="" />
+      <created>1711115461185</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711115340817</updated>
-      <workItem from="1711115341870" duration="119000" />
+      <updated>1711115461185</updated>
+      <workItem from="1711115462362" duration="4191000" />
     </task>
     <servers />
   </component>
