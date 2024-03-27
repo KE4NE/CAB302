@@ -7,7 +7,10 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
+
+import static com.example.assessment.SceneHelper.setScene;
 
 public class MainController {
 
@@ -25,9 +28,7 @@ public class MainController {
     protected void logoutClicked() throws IOException {
         // Will need to change the page here NOT IMPLEMENTED
         Stage stage = (Stage) title.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startup_view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
-        stage.setScene(scene);
+        setScene(stage, "startup_view.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
     }
 
 }

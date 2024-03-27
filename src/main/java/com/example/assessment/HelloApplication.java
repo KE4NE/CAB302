@@ -7,6 +7,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.assessment.SceneHelper.setScene;
+
 public class HelloApplication extends Application {
 
     public static final int HEIGHT = 400;
@@ -14,10 +16,9 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("startup_view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+
+        setScene(stage, "startup_view.fxml", WIDTH, HEIGHT);
         stage.setTitle("Sign In");
-        stage.setScene(scene);
         stage.show();
     }
 

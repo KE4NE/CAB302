@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.assessment.SceneHelper.setScene;
+
 public class HelloController {
     @FXML
     private Label welcomeText;
@@ -31,17 +33,13 @@ public class HelloController {
     protected void signupClicked() throws IOException {
         // Will need to change the page here NOT IMPLEMENTED
         Stage stage = (Stage) signup_btn.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("signup_view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
-        stage.setScene(scene);
+        setScene(stage, "signup_view.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
     }
 
     @FXML
     protected void loginClicked() throws IOException {
         // Authenticate user and change to main page. NOT IMPLEMENTED
         Stage stage = (Stage) login_btn.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main_view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), MainController.WIDTH, MainController.HEIGHT);
-        stage.setScene(scene);
+        setScene(stage, "main_view.fxml", MainController.WIDTH, MainController.HEIGHT);
     }
 }
