@@ -22,6 +22,7 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    // TODO: this is for committing lol just to commit
     public static void main(String[] args) {
         launch();
     }
