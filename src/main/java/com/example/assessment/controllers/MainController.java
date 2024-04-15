@@ -1,8 +1,7 @@
-package com.example.assessment;
+package com.example.assessment.controllers;
 
+import com.example.assessment.HelloApplication;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
