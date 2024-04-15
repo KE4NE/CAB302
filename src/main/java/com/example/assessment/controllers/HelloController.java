@@ -33,6 +33,7 @@ public class HelloController {
         // Will need to change the page here NOT IMPLEMENTED
         Stage stage = (Stage) signup_btn.getScene().getWindow();
         setScene(stage, "signup_view.fxml", HelloApplication.WIDTH, 475);
+        stage.centerOnScreen();
     }
 
     @FXML
@@ -40,5 +41,6 @@ public class HelloController {
         // Authenticate user and change to main page. NOT IMPLEMENTED
         Stage stage = (Stage) login_btn.getScene().getWindow();
         setScene(stage, "main_view.fxml", MainController.WIDTH, MainController.HEIGHT);
+        stage.centerOnScreen();
     }
 }
