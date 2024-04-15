@@ -13,9 +13,9 @@ import static com.example.assessment.SceneHelper.setScene;
 
 public class MainController {
 
-    public static final int WIDTH = 600;
+    public static final int WIDTH = 845;
 
-    public static final int HEIGHT = 400;
+    public static final int HEIGHT = 560;
 
     @FXML
     private Menu logout_menu;

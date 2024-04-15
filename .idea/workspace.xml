@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c95927b-5d08-4e95-9161-5b52077b095d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/logo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/logo.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/main_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/main_view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/signup_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/signup_view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/startup_view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/startup_view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +102,7 @@
       <workItem from="1711192262638" duration="53000" />
       <workItem from="1711199319815" duration="4662000" />
       <workItem from="1711256621999" duration="9324000" />
-      <workItem from="1713155083620" duration="8117000" />
+      <workItem from="1713155083620" duration="9046000" />
     </task>
     <servers />
   </component>
