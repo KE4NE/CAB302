@@ -32,7 +32,7 @@ public class HelloController {
     protected void signupClicked() throws IOException {
         // Will need to change the page here NOT IMPLEMENTED
         Stage stage = (Stage) signup_btn.getScene().getWindow();
-        setScene(stage, "signup_view.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        setScene(stage, "signup_view.fxml", HelloApplication.WIDTH, 475);
     }
 
     @FXML
