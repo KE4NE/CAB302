@@ -1,0 +1,43 @@
+Terms and Conditions of Use for {App Name}
+
+These Terms and Conditions of Use (the "Terms of Use") govern your use of the {App Name} application, and all associated apps made by {Group Name}, its subsidiaries, and affiliates. The application is the property of {Group Name} and its licensors. By accessing or using this application, you agree to be bound by these Terms of Use. If you do not agree with these terms, do not use the application.
+
+Changes to Terms of Use
+
+{Group Name} reserves the right, at its sole discretion, to change, modify, add, or remove portions of these Terms of Use at any time. It is your responsibility to review these Terms of Use periodically for changes. Your continued use of the application following the posting of changes will constitute your acceptance of and agreement to such changes.
+
+License
+
+Subject to these Terms of Use, {Group Name} grants you a personal, non-exclusive, non-transferable, limited privilege to use the application.
+
+Intellectual Property
+
+All intellectual property rights related to the {App Name} application, including but not limited to copyrights, trademarks, patents, and trade secrets, are owned by {Group Name}. You agree not to reproduce, distribute, modify, or create derivative works based on the {App Name} application without prior written consent from {Group Name}.
+
+Limitation of Liability
+
+{Group Name} accepts no liability for any consequences resulting from the use of the {App Name} application. This application is provided "as is" and "as available" without any representations or warranties, express or implied. {Group Name} makes no representations or warranties in relation to this application or the information and materials provided on it.
+
+Deadline Disclaimer
+
+{Group Name} accepts no liability for any failure to meet deadlines, including but not limited to exams, assignments, or tasks. The {App Name} application is solely intended as a tool to support users in organizing and tracking their academic commitments. It is your responsibility to ensure that you meet your deadlines and obligations independently of the application.
+
+Study Techniques and Timer Disclaimer
+
+{Group Name} accepts no liability for the effectiveness of study techniques implemented through the {App Name} application or for the accuracy or reliability of the study timer feature. Users are solely responsible for evaluating and determining the suitability of any study techniques or time management strategies utilized through the application.
+
+Indemnification
+
+You agree to indemnify, defend, and hold harmless {Group Name} and its affiliates, officers, directors, employees, agents, and licensors from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms of Use or your use of the {App Name} application.
+
+Governing Law
+
+These Terms of Use shall be governed by and construed in accordance with Australian law. Any dispute arising under these terms shall be subject to the exclusive jurisdiction of the courts of Australia.
+
+Contact Information
+
+If you have any questions about these Terms of Use, please contact {Group Name} at [insert contact information].
+
+By using the {App Name} application, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.
+
+Last Updated: APR-2024
