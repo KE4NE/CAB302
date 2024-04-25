@@ -123,20 +123,18 @@ public class SettingsController {
     @FXML
     protected void SettingsClicked() throws IOException {
         Stage stage = (Stage) settings_btn.getScene().getWindow();
-        setScene(stage, "user_settings.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        setScene(stage, "user_settings.fxml",SettingsController.WIDTH, SettingsController.HEIGHT);
         stage.centerOnScreen();
     }
 
     @FXML
     protected void hoveredSettingsBtn() {
         settings_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
-        settings_btn.setStyle("-fx-background-color:#74A7BB;");
     }
 
     @FXML
     protected void exitedSettingsBtn() {
         settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-        settings_btn.setStyle("-fx-background-color:#C7D4D9;");
     }
 
 
