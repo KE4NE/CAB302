@@ -40,6 +40,7 @@ public class HelloController {
     protected void loginClicked() throws IOException {
         // Authenticate user and change to main page. NOT IMPLEMENTED
         Stage stage = (Stage) login_btn.getScene().getWindow();
+        stage.setTitle("Main page");
         setScene(stage, "main_view.fxml", MainController.WIDTH, MainController.HEIGHT);
         stage.centerOnScreen();
     }

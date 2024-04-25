@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="843.0" stylesheets="@main_sheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="843.0" stylesheets="@main_sheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.MainController">
    <children>
       <BorderPane layoutY="-2.0" prefHeight="576.0" prefWidth="845.0">
          <left>
@@ -112,6 +107,24 @@
                               <Insets top="15.0" />
                            </HBox.margin>
                         </Text>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="settings_hbox" alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="859.0">
+                     <children>
+                        <Button fx:id="settings_btn" mnemonicParsing="false" maxWidth="-Infinity" minHeight="-Infinity" opacity="0.0">
+                           <font>
+                              <Font name="Dubai Light" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="hoverItem" />
+                              <String fx:value="mainButton" />
+                           </styleClass>
+                        </Button>
+                        <ImageView id="settings_view" fitHeight="53.0" fitWidth="49.0" onMouseClicked="#SettingsClicked" onMouseEntered="#hoveredSettingsBtn" onMouseExited="#exitedSettingsBtn" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@settings.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
                </children></HBox>

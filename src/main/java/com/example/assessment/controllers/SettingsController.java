@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static com.example.assessment.SceneHelper.setScene;
 
-public class MainController {
+public class SettingsController {
 
     public static final int WIDTH = 845;
 
@@ -123,8 +123,7 @@ public class MainController {
     @FXML
     protected void SettingsClicked() throws IOException {
         Stage stage = (Stage) settings_btn.getScene().getWindow();
-        stage.setTitle("User settings");
-        setScene(stage, "user_settings.fxml", SettingsController.WIDTH, SettingsController.HEIGHT);
+        setScene(stage, "user_settings.fxml",SettingsController.WIDTH, SettingsController.HEIGHT);
         stage.centerOnScreen();
     }
 
@@ -136,7 +135,6 @@ public class MainController {
     @FXML
     protected void exitedSettingsBtn() {
         settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-
     }
 
 
