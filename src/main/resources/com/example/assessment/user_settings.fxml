@@ -1,14 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.assessment.controllers.SettingsController">
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="843.0" stylesheets="@main_sheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.SettingsController">
+    <children>
+        <BorderPane layoutY="-2.0" prefHeight="576.0" prefWidth="845.0">
+            <left>
+                <VBox prefHeight="390.0" prefWidth="163.0" style="-fx-background-color: C7D4D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox fx:id="calendar_hbox" onMouseEntered="#hoveredCalendarBtn" onMouseExited="#exitedCalendarBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 1 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredCalendarBtn" onMouseExited="#exitedCalendarBtn" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@calendar.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Button fx:id="calendar_btn" mnemonicParsing="false" onAction="#calendarSelected" onMouseEntered="#hoveredCalendarBtn" onMouseExited="#exitedCalendarBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Calendar">
+                                    <font>
+                                        <Font name="Dubai Light" size="20.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="hoverItem" />
+                                        <String fx:value="mainButton" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="stats_hbox" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@stats.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Button fx:id="stats_btn" mnemonicParsing="false" onAction="#statisticsSelected" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Statistics">
+                                    <font>
+                                        <Font name="Dubai Light" size="20.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="hoverItem" />
+                                        <String fx:value="mainButton" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="logout_hbox" onMouseEntered="#hoveredLogoutBtn" onMouseExited="#exitedLogoutBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredLogoutBtn" onMouseExited="#exitedLogoutBtn" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logout.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Button fx:id="logout_btn" mnemonicParsing="false" onAction="#logoutClicked" onMouseEntered="#hoveredLogoutBtn" onMouseExited="#exitedLogoutBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Logout">
+                                    <font>
+                                        <Font name="Dubai Light" size="20.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                    </children></VBox>
+            </left>
+            <top>
+                <HBox prefHeight="73.0" prefWidth="819.0" style="-fx-background-color: #C7D4D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox fillHeight="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="89.0" prefWidth="260.0">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logo.jpeg" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="StudyScheduler" textAlignment="CENTER" wrappingWidth="190.0">
+                                    <font>
+                                        <Font name="Dubai Light" size="29.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets top="15.0" />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                        </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="101.0">
+                     <children>
+                        <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@settings.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                    </children></HBox>
+            </top>
+        </BorderPane>
+    </children>
 </AnchorPane>
