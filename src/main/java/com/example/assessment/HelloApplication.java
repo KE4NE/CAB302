@@ -29,19 +29,8 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        connection = DatabaseConnection.getInstance();
-        createTables();
-        UserAccount testv2 = new UserAccount("Jacob", "testv2");
+        //SqliteUserDAO userDAO = new SqliteUserDAO();
+        DatabaseConnection.InitialiseDB();
         launch();
-    }
-
-    public static void createTables() {
-        try {
-            Statement statement = connection.createStatement();
-            statement.execute("CREATE TABLE IF NOT EXISTS UserAccounts(id integer primary key autoincrement, username text, hashedPassword text, salt text)");
-            connection.close();
-        } catch (SQLException sqle) {
-            System.err.println(sqle);
-        }
     }
 }

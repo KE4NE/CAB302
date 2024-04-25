@@ -16,32 +16,16 @@ public class UserAccount {
     private String passwordSalt;
     private String securePassword;
 
+    private SqliteUserDAO userDAO = new SqliteUserDAO();
+
     private final String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
     public UserAccount(String username, String password) {
         this.username = username;
-
         this.passwordSalt = this.generateSalt();
-
         String combinedSalt = password + passwordSalt;
-
         this.securePassword = Hashing.sha256().hashString(combinedSalt, StandardCharsets.UTF_8).toString();
-
-        System.out.println(securePassword);
-        System.out.println(passwordSalt);
-
-        try {
-            PreparedStatement statement = HelloApplication.connection.prepareStatement(
-                    "INSERT INTO UserAccounts(username, hashedPassword, salt)" +
-                            " VALUES (?,?,?,?)");
-            statement.setString(1, username);
-            statement.setString(2, securePassword);
-            statement.setString(3, passwordSalt);
-            statement.execute();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-
+        userDAO.addUser(username, securePassword, passwordSalt);
     }
 
     private String generateSalt() {
@@ -64,10 +48,7 @@ public class UserAccount {
         return this.securePassword;
     }
 
-    public static boolean verifyAccount(String username, String password) {
-        // Check if username is in database.
-        // Retrieve hashed password and salt from database
-        // Verify whether hash(password + salt) = stored password in database
-        return true;
+    public String getSalt() {
+        return this.passwordSalt;
     }
 }
