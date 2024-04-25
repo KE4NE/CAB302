@@ -3,7 +3,7 @@ package com.example.assessment;
 import javafx.application.Application;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
+import java.sql.Connection;
 import java.io.IOException;
 
 import static com.example.assessment.SceneHelper.setScene;
@@ -25,6 +25,7 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+        Connection connection = DatabaseConnection.getInstance();
         launch();
     }
 }
