@@ -28,6 +28,9 @@ public class MainController {
     private HBox stats_hbox;
 
     @FXML
+    private HBox settings_hbox;
+
+    @FXML
     private Button stats_btn;
 
     @FXML
@@ -35,6 +38,9 @@ public class MainController {
 
     @FXML
     private Button calendar_btn;
+
+    @FXML
+    private Button settings_btn;
 
 
     private boolean calendarBtnBool;
@@ -113,6 +119,24 @@ public class MainController {
     protected void exitedLogoutBtn() {
         logout_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
         logout_btn.setStyle("-fx-background-color:#C7D4D9;");
+    }
+    @FXML
+    protected void SettingsClicked() throws IOException {
+        Stage stage = (Stage) settings_btn.getScene().getWindow();
+        setScene(stage, "user_settings.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
+        stage.centerOnScreen();
+    }
+
+    @FXML
+    protected void hoveredSettingsBtn() {
+        settings_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
+        settings_btn.setStyle("-fx-background-color:#74A7BB;");
+    }
+
+    @FXML
+    protected void exitedSettingsBtn() {
+        settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
+        settings_btn.setStyle("-fx-background-color:#C7D4D9;");
     }
 
 

@@ -109,8 +109,17 @@
                                 </Text>
                             </children>
                         </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="101.0">
+                  <HBox fx:id="settings_hbox" onMouseEntered="#hoveredSettingsBtn" onMouseExited="#exitedSettingsBtn" alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="859.0">
                      <children>
+                         <Button fx:id="settings_btn" mnemonicParsing="false" onAction="#SettingsClicked" onMouseEntered="#hoveredLogoutBtn" onMouseExited="#exitedLogoutBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Logout">
+                           <font>
+                              <Font name="Dubai Light" size="20.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="hoverItem" />
+                              <String fx:value="mainButton" />
+                           </styleClass>
+                        </Button>
                         <ImageView fitHeight="53.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@settings.png" />
