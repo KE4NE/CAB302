@@ -43,12 +43,12 @@
          <Font name="Dubai Light" size="16.0" />
       </font>
    </PasswordField>
-   <PasswordField id="password" fx:id="password1" maxWidth="-Infinity" prefHeight="41.0" prefWidth="255.0" promptText="Confirm Password" style="-fx-border-color: black;">
+   <PasswordField id="password" fx:id="confirmPassword" maxWidth="-Infinity" prefHeight="41.0" prefWidth="255.0" promptText="Confirm Password" style="-fx-border-color: black;">
       <font>
          <Font name="Dubai Light" size="16.0" />
       </font>
    </PasswordField>
-   <Button id="login_btn" fx:id="signup_btn" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="255.0" stylesheets="@main_sheet.css" text="Sign up">
+   <Button id="login_btn" fx:id="signup_btn" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#signupClicked" prefHeight="35.0" prefWidth="255.0" stylesheets="@main_sheet.css" text="Sign up">
       <font>
          <Font name="Century Gothic" size="16.0" />
       </font>

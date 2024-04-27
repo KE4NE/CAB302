@@ -13,31 +13,20 @@ import com.google.common.hash.Hashing;
 
 public class UserAccount {
     private String username;
-    private String passwordSalt;
-    private String securePassword;
+    private String password;
 
-    private SqliteUserDAO userDAO = new SqliteUserDAO();
-
-    private final String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    public boolean valid;
 
     public UserAccount(String username, String password) {
         this.username = username;
-        this.passwordSalt = this.generateSalt();
-        String combinedSalt = password + passwordSalt;
-        this.securePassword = Hashing.sha256().hashString(combinedSalt, StandardCharsets.UTF_8).toString();
-        userDAO.addUser(username, securePassword, passwordSalt);
+        this.password = password;
+        this.valid = true;
     }
 
-    private String generateSalt() {
-        StringBuilder salt = new StringBuilder();
-        int saltLength = 10;
-        int availableChars = SALTCHARS.length();
-        Random randVal = new Random();
-        for (int i = 0; i < saltLength; i++) {
-            int randIndex = randVal.nextInt(availableChars);
-            salt.append(SALTCHARS.charAt(randIndex));
-        }
-        return salt.toString();
+    public UserAccount() {
+        this.username = null;
+        this.password = null;
+        this.valid = false;
     }
 
     public String getUsername() {
@@ -45,10 +34,7 @@ public class UserAccount {
     }
 
     public String getPassword() {
-        return this.securePassword;
+        return this.password;
     }
 
-    public String getSalt() {
-        return this.passwordSalt;
-    }
 }
