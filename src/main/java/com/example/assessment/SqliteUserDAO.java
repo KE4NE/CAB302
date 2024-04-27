@@ -57,6 +57,9 @@ public class SqliteUserDAO {
 
     public UserAccount VerifyUser(String username, String password) {
         String providedPassword, retrievedPassword;
+        if (uniqueUsername(username)) {
+            return new UserAccount();
+        }
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT hashedPassword, salt FROM UserAccounts" +

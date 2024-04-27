@@ -33,7 +33,7 @@ public class HelloController {
 
     private SqliteUserDAO userDAO = new SqliteUserDAO();
 
-    public UserAccount authenticatedUser;
+    public static UserAccount authenticatedUser;
 
     @FXML
     protected void signupClicked() throws IOException {

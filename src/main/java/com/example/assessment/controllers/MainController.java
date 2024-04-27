@@ -51,6 +51,7 @@ public class MainController {
 
     @FXML
     protected void logoutClicked() throws IOException {
+        HelloController.authenticatedUser = null;
         Stage stage = (Stage) logout_btn.getScene().getWindow();
         setScene(stage, "startup_view.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.centerOnScreen();
