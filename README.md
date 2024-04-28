@@ -3,7 +3,9 @@ CAB302 project
 Group members:
 Mitchell Lohmann,
 Simon Wegener,
-Finn Habberjam,
 Christina Sirgunas,
-Keane Asson
+Keane Asson,
+Beau Mitrov
+
+Past member: Finn Habberjam
 
