@@ -13,15 +13,16 @@ public class UserAccount {
     private final String username;
     private final String password;
 
-    Connection connection;
+    //Connection connection;
     public boolean valid = false;
+
+    public static UserDAOInterface userDAO = new SqliteUserDAO();
 
     public UserAccount(String username, String password, boolean existing) {
         this.username = username;
         this.password = password;
-        this.connection = DatabaseConnection.getInstance();
         if (existing) {
-            this.valid = this.accountExists(username);
+            this.valid = userDAO.correctPassword(username, password);
         } else {
             boolean usernameUnique = this.uniqueUsername(username);
             boolean validPassword = this.checkPassword(password);
@@ -43,28 +44,13 @@ public class UserAccount {
     }
 
     private boolean uniqueUsername(String username) {
-        return numberOfAccounts(username) == 0;
+        return userDAO.numberOfAccounts(username) == 0;
     }
 
     private boolean accountExists(String username) {
-        return numberOfAccounts(username) == 1;
+        return userDAO.numberOfAccounts(username) == 1;
     }
 
-    private int numberOfAccounts(String username) {
-        int numberAccounts;
-        try {
-            // Check that there are no existing accounts by this user.
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT count(username) AS No FROM UserAccounts"
-                            + " WHERE username=?");
-            statement.setString(1, username);
-            ResultSet resultSet = statement.executeQuery();
-            numberAccounts = resultSet.getInt("No");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return numberAccounts;
-    }
 
     private boolean checkPassword(String password) {
         return password.length() >= 5;

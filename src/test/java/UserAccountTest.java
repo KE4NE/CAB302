@@ -1,18 +1,19 @@
 import com.example.assessment.DatabaseConnection;
+import com.example.assessment.MockUserDAO;
 import com.example.assessment.UserAccount;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 class UserAccountTest {
 
     @BeforeAll
-    static void setupDB() {
-        DatabaseConnection.InitialiseDB();
+    static void changeDAO() {
+        UserAccount.userDAO = new MockUserDAO();
     }
 
     @Test
     void passwordTooShort() {
         UserAccount user = new UserAccount("Test", "pass", false);
-        assertFalse(false);
+        assertFalse(user.valid);
     }
 
     @Test

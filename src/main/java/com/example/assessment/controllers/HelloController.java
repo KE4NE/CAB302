@@ -52,7 +52,7 @@ public class HelloController {
             new PopUp("Username or Password cannot be blank", stage);
             return;
         }
-        authenticatedUser = userDAO.VerifyUser(usernameText, passwordText);
+        authenticatedUser = userDAO.verifyUser(usernameText, passwordText);
         if (authenticatedUser.valid) {
             // Authenticate user and change to main page. NOT IMPLEMENTED
             stage.setTitle("Main page");

@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.sql.*;
 import java.util.Random;
 
-public class SqliteUserDAO {
+public class SqliteUserDAO implements UserDAOInterface {
 
     Connection connection;
 
@@ -16,10 +16,10 @@ public class SqliteUserDAO {
         this.connection = DatabaseConnection.getInstance();
     }
 
+    @Override
     public boolean addUser(String username, String password) {
-        String passwordSalt = generateSalt();
-        String combinedSalt = password + passwordSalt;
-        String securePassword = Hashing.sha256().hashString(combinedSalt, StandardCharsets.UTF_8).toString();
+        String passwordSalt = CryptographyHelper.generateSalt();
+        String securePassword = CryptographyHelper.hashPassword(password, passwordSalt);
         UserAccount testUser = new UserAccount(username, password, false);
         if (!testUser.valid) {
             return false;
@@ -39,8 +39,29 @@ public class SqliteUserDAO {
         return true;
     }
 
-    public UserAccount VerifyUser(String username, String password) {
-        String providedPassword, retrievedPassword;
+    public boolean correctPassword(String username, String password) {
+        String retrievedPassword, retrievedSalt;
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT hashedPassword, salt FROM UserAccounts" +
+                            " WHERE username=?");
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            retrievedPassword = resultSet.getString("hashedPassword");
+            retrievedSalt = resultSet.getString("salt");
+            System.out.println(retrievedPassword);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        if (CryptographyHelper.verifyPassword(retrievedPassword,password,retrievedSalt)) {
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public UserAccount verifyUser(String username, String password) {
+        String retrievedPassword, retrievedSalt;
         UserAccount testUser = new UserAccount(username, password, true);
         System.out.println(testUser.valid);
         if (!testUser.valid) {
@@ -53,29 +74,31 @@ public class SqliteUserDAO {
             statement.setString(1, username);
             ResultSet resultSet = statement.executeQuery();
             retrievedPassword = resultSet.getString("hashedPassword");
-            String retrievedSalt = resultSet.getString("salt");
-            providedPassword = Hashing.sha256().hashString(password+retrievedSalt,
-                    StandardCharsets.UTF_8).toString();
-            System.out.println(providedPassword);
+            retrievedSalt = resultSet.getString("salt");
             System.out.println(retrievedPassword);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        if (providedPassword.equals(retrievedPassword)) {
+        if (CryptographyHelper.verifyPassword(retrievedPassword,password,retrievedSalt)) {
             return new UserAccount(username,password, true);
         }
         return new UserAccount();
     }
 
-    private String generateSalt() {
-        StringBuilder salt = new StringBuilder();
-        int saltLength = 10;
-        int availableChars = SALTCHARS.length();
-        Random randVal = new Random();
-        for (int i = 0; i < saltLength; i++) {
-            int randIndex = randVal.nextInt(availableChars);
-            salt.append(SALTCHARS.charAt(randIndex));
+    @Override
+    public int numberOfAccounts(String username) {
+        int numberAccounts;
+        try {
+            // Check that there are no existing accounts by this user.
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT count(username) AS No FROM UserAccounts"
+                            + " WHERE username=?");
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            numberAccounts = resultSet.getInt("No");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-        return salt.toString();
+        return numberAccounts;
     }
 }

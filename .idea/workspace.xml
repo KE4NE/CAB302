@@ -5,18 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cb99fbb-8d59-4c8f-b015-581257f883a2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/CryptographyHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/MockUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/UserDAOInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/SqliteUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/SqliteUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloApplication.executor": "Run",
     "JUnit.UserAccountTest.executor": "Run",
-    "git-widget-placeholder": "Merging master"
+    "git-widget-placeholder": "master",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
   <component name="TaskManager">
