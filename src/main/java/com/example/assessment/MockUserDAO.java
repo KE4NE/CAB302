@@ -40,7 +40,6 @@ public class MockUserDAO implements UserDAOInterface{
         for (UserAccount user : Users) {
             if ((user.getUsername()).equals(username)) {
                 NoAccounts++;
-                System.out.println("Match Found");
             }
         }
         return NoAccounts;

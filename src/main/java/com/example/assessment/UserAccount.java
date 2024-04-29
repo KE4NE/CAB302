@@ -47,11 +47,6 @@ public class UserAccount {
         return userDAO.numberOfAccounts(username) == 0;
     }
 
-    private boolean accountExists(String username) {
-        return userDAO.numberOfAccounts(username) == 1;
-    }
-
-
     private boolean checkPassword(String password) {
         return password.length() >= 5;
     }

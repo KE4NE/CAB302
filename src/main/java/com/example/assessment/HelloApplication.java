@@ -29,7 +29,6 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        //SqliteUserDAO userDAO = new SqliteUserDAO();
         DatabaseConnection.InitialiseDB();
         launch();
     }
