@@ -54,9 +54,9 @@ public class HelloController {
         }
         authenticatedUser = userDAO.verifyUser(usernameText, passwordText);
         if (authenticatedUser.valid) {
-            // Authenticate user and change to main page. NOT IMPLEMENTED
+            // Authenticate user and change to main page
             stage.setTitle("Main page");
-            setScene(stage, "main_view.fxml", MainController.WIDTH, MainController.HEIGHT);
+            setScene(stage, "main_menu.fxml", MainController.WIDTH, MainController.HEIGHT);
             stage.centerOnScreen();
         } else {
             new PopUp("Error: Incorrect Details", stage);
