@@ -16,28 +16,12 @@ public class SqliteUserDAO {
         this.connection = DatabaseConnection.getInstance();
     }
 
-    public boolean uniqueUsername(String username) {
-        int numberAccounts;
-        try {
-            // Check that there are no existing accounts by this user.
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT count(username) AS No FROM UserAccounts"
-                    + " WHERE username=?");
-            statement.setString(1, username);
-            ResultSet resultSet = statement.executeQuery();
-            numberAccounts = resultSet.getInt("No");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return numberAccounts == 0;
-    }
-
     public boolean addUser(String username, String password) {
         String passwordSalt = generateSalt();
         String combinedSalt = password + passwordSalt;
         String securePassword = Hashing.sha256().hashString(combinedSalt, StandardCharsets.UTF_8).toString();
-        if (!uniqueUsername(username)) {
-            System.out.print("Account already exists");
+        UserAccount testUser = new UserAccount(username, password, false);
+        if (!testUser.valid) {
             return false;
         }
         try {
@@ -57,7 +41,9 @@ public class SqliteUserDAO {
 
     public UserAccount VerifyUser(String username, String password) {
         String providedPassword, retrievedPassword;
-        if (uniqueUsername(username)) {
+        UserAccount testUser = new UserAccount(username, password, true);
+        System.out.println(testUser.valid);
+        if (!testUser.valid) {
             return new UserAccount();
         }
         try {
@@ -76,7 +62,7 @@ public class SqliteUserDAO {
             throw new RuntimeException(e);
         }
         if (providedPassword.equals(retrievedPassword)) {
-            return new UserAccount(username,password);
+            return new UserAccount(username,password, true);
         }
         return new UserAccount();
     }

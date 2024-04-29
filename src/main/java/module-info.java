@@ -3,6 +3,7 @@ module com.example.assessment {
     requires javafx.fxml;
     requires java.sql;
     requires com.google.common;
+    //requires org.junit.jupiter.api;
 
 
     opens com.example.assessment to javafx.fxml;

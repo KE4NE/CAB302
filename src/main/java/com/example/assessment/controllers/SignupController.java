@@ -57,7 +57,7 @@ public class SignupController {
         if (confirmPassText.equals(passwordText)) {
             boolean userAdded = userDAO.addUser(usernameText, passwordText);
             if (!userAdded) {
-                new PopUp("Error: Username already exists.", stage);
+                new PopUp("Error: Username already exists or password too short.", stage);
             }
             else {
                 new PopUp("Account Created Successfully.", stage);
