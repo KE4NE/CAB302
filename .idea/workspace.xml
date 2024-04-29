@@ -4,147 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b351c2-e3ef-43a3-bf3e-37c4a451242c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserAccountTest.java" afterDir="false" />
+    <list default="true" id="7cb99fbb-8d59-4c8f-b015-581257f883a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/SqliteUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/SqliteUserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/UserAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2fft9ggirdaMQFtziZDai74Gzd6" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.MyApp.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
     "JUnit.UserAccountTest.executor": "Run",
-    "JUnit.UserAccountTest.passwordTooShort.executor": "Run",
-    "JUnit.UserAccountTest.validExistingAccount.executor": "Debug",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/keane/Documents/QUT Y2/Test v4/CAB302",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5149425",
-    "vue.rearranger.settings.migration": "true"
+    "git-widget-placeholder": "Merging master"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\keane\Documents\QUT Y2\Test v4\CAB302\src\test\java" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="UserAccountTest.passwordTooShort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assessment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.assessment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.assessment" />
-      <option name="MAIN_CLASS_NAME" value="com.example.assessment.UserAccountTest" />
-      <option name="METHOD_NAME" value="passwordTooShort" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserAccountTest.validExistingAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assessment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.assessment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.assessment" />
-      <option name="MAIN_CLASS_NAME" value="com.example.assessment.UserAccountTest" />
-      <option name="METHOD_NAME" value="validExistingAccount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CAB302" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CAB302" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.UserAccountTest.passwordTooShort" />
-        <item itemvalue="JUnit.UserAccountTest.validExistingAccount" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-18.0.2-corretto-18.0.2-4caba194b151-5720f15e" />
-      </set>
-    </attachedChunks>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="13b351c2-e3ef-43a3-bf3e-37c4a451242c" name="Changes" comment="" />
-      <created>1714203810164</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1714203810164</updated>
-      <workItem from="1714203811129" duration="509000" />
-      <workItem from="1714355572289" duration="5213000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
