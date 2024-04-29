@@ -1,20 +1,13 @@
 package com.example.assessment;
 
-import com.google.common.hash.Hashing;
-
-import java.nio.charset.StandardCharsets;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.Random;
 
 public class MockUserDAO implements UserDAOInterface{
 
-    List<UserAccount> Users = new ArrayList<>();
-    List<String> hashedPasswords = new ArrayList<>();
-    List<String> Salts = new ArrayList<>();
+    public List<UserAccount> Users = new ArrayList<>();
+    public List<String> hashedPasswords = new ArrayList<>();
+    public List<String> Salts = new ArrayList<>();
 
 
 
@@ -34,7 +27,9 @@ public class MockUserDAO implements UserDAOInterface{
     @Override
     public UserAccount verifyUser(String username, String password) {
         if (numberOfAccounts(username) == 1) {
-            return new UserAccount(username, password, true);
+            if (this.correctPassword(username, password)) {
+                return new UserAccount(username, password, true);
+            }
         }
         return new UserAccount();
     }
@@ -45,6 +40,7 @@ public class MockUserDAO implements UserDAOInterface{
         for (UserAccount user : Users) {
             if ((user.getUsername()).equals(username)) {
                 NoAccounts++;
+                System.out.println("Match Found");
             }
         }
         return NoAccounts;
@@ -52,7 +48,13 @@ public class MockUserDAO implements UserDAOInterface{
 
     @Override
     public boolean correctPassword(String username, String password) {
-        return false;
+        List<String> Usernames = new ArrayList<>();
+        for (UserAccount user : Users) {
+            Usernames.add(user.getUsername());
+        }
+        int userIndex = Usernames.indexOf(username);
+        String hashedPassword = hashedPasswords.get(userIndex);
+        String salt = Salts.get(userIndex);
+        return CryptographyHelper.verifyPassword(hashedPassword, password, salt);
     }
-
 }

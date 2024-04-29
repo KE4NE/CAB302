@@ -1,9 +1,9 @@
-import com.example.assessment.DatabaseConnection;
-import com.example.assessment.MockUserDAO;
-import com.example.assessment.UserAccount;
+import com.example.assessment.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 class UserAccountTest {
+
+    //public UserDAOInterface userDAO = new MockUserDAO();
 
     @BeforeAll
     static void changeDAO() {
@@ -19,8 +19,9 @@ class UserAccountTest {
     @Test
     void duplicateAccounts() {
         // Account under 'Keane' already exists in the database
-        UserAccount user = new UserAccount("Keane", "password123", false);
-        assertFalse(user.valid);
+        UserAccount.userDAO.addUser("Keane", "password123");
+        UserAccount user2 = new UserAccount("Keane", "pass123", false);
+        assertFalse(user2.valid);
     }
     @Test
     void validNewAccount() {
@@ -31,9 +32,17 @@ class UserAccountTest {
 
     @Test
     void validExistingAccount() {
-        // Account with existing username and unverified password
-        UserAccount user = new UserAccount("Keane", "incorrectPassword", true);
-        assertTrue(user.valid);
-        // Should be valid as the user 'Keane' does exist, the password just has not been correctly validated as of yet.
+        // Account with existing username and correct password
+        UserAccount.userDAO.addUser("test", "testpassword123");
+        UserAccount testUser = new UserAccount("test", "testpassword123", true);
+        assertTrue(testUser.valid);
+    }
+
+    @Test
+    void invalidExistingAccount() {
+        // Existing account with incorrect password.
+        UserAccount.userDAO.addUser("testAccV2", "password123");
+        UserAccount testAccV2 = new UserAccount("testAccV2", "unknown123", true);
+        assertFalse(testAccV2.valid);
     }
 }

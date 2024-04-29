@@ -20,7 +20,7 @@ public class SqliteUserDAO implements UserDAOInterface {
     public boolean addUser(String username, String password) {
         String passwordSalt = CryptographyHelper.generateSalt();
         String securePassword = CryptographyHelper.hashPassword(password, passwordSalt);
-        UserAccount testUser = new UserAccount(username, password, false);
+        UserAccount testUser = new UserAccount(username,password, false);
         if (!testUser.valid) {
             return false;
         }
@@ -62,7 +62,7 @@ public class SqliteUserDAO implements UserDAOInterface {
     @Override
     public UserAccount verifyUser(String username, String password) {
         String retrievedPassword, retrievedSalt;
-        UserAccount testUser = new UserAccount(username, password, true);
+        UserAccount testUser = new UserAccount(username,password,  true);
         System.out.println(testUser.valid);
         if (!testUser.valid) {
             return new UserAccount();
@@ -80,7 +80,7 @@ public class SqliteUserDAO implements UserDAOInterface {
             throw new RuntimeException(e);
         }
         if (CryptographyHelper.verifyPassword(retrievedPassword,password,retrievedSalt)) {
-            return new UserAccount(username,password, true);
+            return new UserAccount(username,password,true);
         }
         return new UserAccount();
     }
