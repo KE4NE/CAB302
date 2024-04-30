@@ -10,4 +10,7 @@ module com.example.assessment {
     exports com.example.assessment;
     exports com.example.assessment.controllers;
     opens com.example.assessment.controllers to javafx.fxml;
+    requires transitive javafx.graphics;
+    requires fr.brouillard.oss.cssfx;
+    requires com.calendarfx.view;
 }

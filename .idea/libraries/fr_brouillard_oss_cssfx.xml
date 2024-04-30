@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fr.brouillard.oss.cssfx" type="repository">
+    <properties maven-id="fr.brouillard.oss:cssfx:11.5.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/cssfx-11.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

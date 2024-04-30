@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="calendarfx.view" type="repository">
+    <properties maven-id="com.calendarfx:view:11.12.7" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/view-11.12.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ikonli-javafx-12.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ikonli-core-12.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ikonli-fontawesome-pack-12.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ical4j-4.0.0-rc5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.16.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/threeten-extra-1.7.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/controlsfx-11.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-controls-19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-controls-19-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-19-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-19-win.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
