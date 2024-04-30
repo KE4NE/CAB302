@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46335070-03f2-4f5a-bb62-83a8059a116a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/fr_brouillard_oss_cssfx.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/SqliteUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/SqliteUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/assessment/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/assessment/main_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/assessment/main_menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,7 @@
   "keyToString": {
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.HelloApplication.executor": "Run",
+    "Application.SchedulerApp.executor": "Run",
     "Application.SchedulerAppLauncher.executor": "Run",
     "Downloaded.Files.Path.Enabled": "true",
     "JAR Application.view-11.8.3.jar.executor": "Run",
@@ -44,7 +46,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/keane/Documents/QUT Y2/Test v4/CAB302/src/main/java",
+    "last_opened_file_path": "C:/Users/keane/Documents/QUT Y2/Test v4/CAB302/src/main/java/com/example/assessment",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -57,8 +59,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\keane\Documents\QUT Y2\Test v4\CAB302\src\main\java" />
       <recent name="C:\Users\keane\Documents\QUT Y2\Test v4\CAB302\src\main\java\com\example\assessment" />
+      <recent name="C:\Users\keane\Documents\QUT Y2\Test v4\CAB302\src\main\java" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\keane\Documents\QUT Y2\Test v4\CAB302\src\main\java\com\calendarfx\" />
@@ -90,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714486575990</updated>
-      <workItem from="1714486581762" duration="1418000" />
+      <workItem from="1714486581762" duration="3864000" />
     </task>
     <servers />
   </component>

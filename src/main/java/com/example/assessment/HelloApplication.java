@@ -19,7 +19,6 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-
         setScene(stage, "startup_view.fxml", WIDTH, HEIGHT);
         stage.setTitle("Sign In");
         Image icon = new Image(getClass().getResourceAsStream("logo.jpeg"));

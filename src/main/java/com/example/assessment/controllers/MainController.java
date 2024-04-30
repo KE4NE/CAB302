@@ -1,9 +1,13 @@
 package com.example.assessment.controllers;
 
+import com.calendarfx.view.*;
 import com.example.assessment.HelloApplication;
+import fr.brouillard.oss.cssfx.CSSFX;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -42,11 +46,29 @@ public class MainController {
     @FXML
     private Button settings_btn;
 
+    @FXML
+    private StackPane main_pane;
+
+    @FXML
+    private Pane calendar_pane;
 
     private boolean calendarBtnBool;
 
     public void initialize() {
         calendarSelected();
+        CalendarView calendarView = new CalendarView(CalendarView.Page.DAY, CalendarView.Page.WEEK);
+        calendarView.showWeekPage();
+        calendarView.setEnableTimeZoneSupport(false);
+        calendarView.setCreateEntryClickCount(1);
+
+        DetailedWeekView detailedWeekView = calendarView.getWeekPage().getDetailedWeekView();
+        WeekView weekView = detailedWeekView.getWeekView();
+        DayView dayView = calendarView.getDayPage().getDetailedDayView().getDayView();
+
+        detailedWeekView.setShowToday(false);
+        detailedWeekView.setEarlyLateHoursStrategy(DayViewBase.EarlyLateHoursStrategy.HIDE);
+
+        main_pane.getChildren().addAll(calendarView); // introPane);
     }
 
     @FXML

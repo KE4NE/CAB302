@@ -41,6 +41,9 @@ public class SqliteUserDAO implements UserDAOInterface {
 
     public boolean correctPassword(String username, String password) {
         String retrievedPassword, retrievedSalt;
+        if (numberOfAccounts(username) != 1) {
+            return false;
+        }
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT hashedPassword, salt FROM UserAccounts" +
