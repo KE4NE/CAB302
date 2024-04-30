@@ -42,6 +42,11 @@ public class MainController {
     @FXML
     private Button settings_btn;
 
+    @FXML
+    private Button menu_btn;
+
+    @FXML
+    private HBox menu_hbox;
 
     private boolean calendarBtnBool;
 
@@ -140,5 +145,24 @@ public class MainController {
 
     }
 
+    @FXML
+    protected void hoveredMainMenuBtn(){
+        menu_hbox.setStyle("-fx-background-color:#74A7BB");
+        menu_btn.setStyle("-fx-background-color:#74A7BB");
+    }
+
+    @FXML
+    protected void exitedMainMenuBtn(){
+        menu_hbox.setStyle("-fx-background-color:#C7D4D9");
+        menu_btn.setStyle("-fx-background-color:#C7D4D9");
+    }
+
+    @FXML
+    protected void MainMenuClicked() throws IOException{
+        Stage stage = (Stage) menu_btn.getScene().getWindow();
+        stage.setTitle("Main page");
+        setScene(stage, "main_menu.fxml", SettingsController.WIDTH, SettingsController.HEIGHT);
+        stage.centerOnScreen();
+    }
 
 }
