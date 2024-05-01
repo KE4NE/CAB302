@@ -5,7 +5,6 @@ Mitchell Lohmann,
 Simon Wegener,
 Christina Sirgunas,
 Keane Asson,
-Beau Mitrov
 
-Past member: Finn Habberjam
+Past member: Finn Habberjam, Beau Mitrov
 
