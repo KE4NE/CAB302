@@ -26,8 +26,8 @@
 </dependency>
 
 <dependency>
-        <groupId>fr.brouillard.oss.cssfx</groupId>
-        <artifactId>brouillard</artifactId>
+        <groupId>fr.brouillard.oss</groupId>
+        <artifactId>cssfx</artifactId>
         <version>11.5.1</version>
 </dependency>
 <dependency>
