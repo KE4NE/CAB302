@@ -13,23 +13,22 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 <junit.version>5.10.0</junit.version>  </properties>
 
-  <dependencies>
-    <dependency>
+<dependencies>
+<dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
       <version>18.0.2</version>
     </dependency>
-           <dependency>
+<dependency>
         <groupId>com.calendarfx</groupId>
         <artifactId>calendarfx</artifactId>
         <version>11.12.7</version>
-    </dependency>
-</dependency>
-           <dependency>
+         </dependency>
+<dependency>
         <groupId>fr.brouillard.oss.cssfx</groupId>
         <artifactId>brouillard</artifactId>
         <version>11.5.1</version>
-    </dependency>
+</dependency>
 <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
@@ -58,7 +57,7 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
+</dependencies>
 
 
   <build>
