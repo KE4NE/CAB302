@@ -51,7 +51,6 @@ public class MainController {
 
     @FXML
     private Pane calendar_pane;
-
     private boolean calendarBtnBool;
 
     public void initialize() {
@@ -161,6 +160,4 @@ public class MainController {
         settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
 
     }
-
-
 }

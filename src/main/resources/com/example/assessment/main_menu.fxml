@@ -136,13 +136,13 @@
                         </HBox>
                     </children></HBox>
             </top>
-         <center>
-            <StackPane fx:id="main_pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Pane fx:id="calendar_pane" prefHeight="200.0" prefWidth="200.0" />
-               </children>
-            </StackPane>
-         </center>
+            <center>
+                <StackPane fx:id="main_pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane fx:id="calendar_pane" prefHeight="200.0" prefWidth="200.0" />
+                    </children>
+                </StackPane>
+            </center>
         </BorderPane>
     </children>
 </AnchorPane>
