@@ -1,0 +1,16 @@
+@font-face {
+    src: url('Jura-Regular.ttf');
+}
+
+.timer-button {
+    -fx-background-color: #c7d4d9;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.1, 0, 2);
+}
+
+.timer-button:hover {
+    -fx-background-color: #aec0c8;
+}

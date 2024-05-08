@@ -14,6 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.Label?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="843.0" stylesheets="@main_sheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.MainController">
     <children>
         <BorderPane layoutY="-2.0" prefHeight="576.0" prefWidth="845.0">
@@ -47,9 +48,9 @@
                                 <Insets bottom="10.0" top="10.0" />
                             </padding>
                         </HBox>
-                        <HBox fx:id="stats_hbox" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
+                        <HBox fx:id="timer_hbox" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
                             <children>
-                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@stats.png" />
                                     </image>
@@ -57,7 +58,7 @@
                                         <Insets left="10.0" />
                                     </HBox.margin>
                                 </ImageView>
-                                <Button fx:id="stats_btn" mnemonicParsing="false" onAction="#statisticsSelected" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Statistics">
+                                <Button fx:id="timer_btn" mnemonicParsing="false" onAction="#timerSelected" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Timer">
                                     <font>
                                         <Font name="Dubai Light" size="20.0" />
                                     </font>
@@ -139,12 +140,8 @@
             <center>
                 <StackPane fx:id="main_pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <children>
-                  <StackPane fx:id="calendarfx_pane" prefHeight="150.0" prefWidth="200.0" />
-                  <Pane fx:id="stats_pane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
-                     <children>
-                        <Text layoutX="134.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest" wrappingWidth="293.47010803222656" />
-                     </children>
-                  </Pane>
+                        <fx:include fx:id="calendarfx" source="calendarfx_view.fxml" />
+                        <fx:include fx:id="timer" source="timer_view.fxml"/>
                     </children>
                 </StackPane>
             </center>

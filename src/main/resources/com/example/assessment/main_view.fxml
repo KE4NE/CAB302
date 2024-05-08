@@ -40,9 +40,9 @@
                         <Insets bottom="10.0" top="10.0" />
                      </padding>
                   </HBox>
-                  <HBox fx:id="stats_hbox" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
+                  <HBox fx:id="stats_hbox" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
                      <children>
-                        <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@stats.png" />
                            </image>
@@ -50,7 +50,7 @@
                               <Insets left="10.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Button fx:id="stats_btn" mnemonicParsing="false" onAction="#statisticsSelected" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Statistics">
+                        <Button fx:id="stats_btn" mnemonicParsing="false" onAction="#timerSelected" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Statistics">
                            <font>
                               <Font name="Dubai Light" size="20.0" />
                            </font>
@@ -127,7 +127,8 @@
                         </ImageView>
                      </children>
                   </HBox>
-               </children></HBox>
+               </children>
+            </HBox>
          </top>
       </BorderPane>
    </children>
