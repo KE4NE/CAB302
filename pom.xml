@@ -20,9 +20,15 @@
       <version>18.0.2</version>
     </dependency>
            <dependency>
-        <groupId>org.calendarfx</groupId>
+        <groupId>com.calendarfx</groupId>
         <artifactId>calendarfx</artifactId>
         <version>11.12.7</version>
+    </dependency>
+</dependency>
+           <dependency>
+        <groupId>fr.brouillard.oss.cssfx</groupId>
+        <artifactId>brouillard</artifactId>
+        <version>11.5.1</version>
     </dependency>
 <dependency>
         <groupId>com.google.guava</groupId>
