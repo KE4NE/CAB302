@@ -139,7 +139,12 @@
             <center>
                 <StackPane fx:id="main_pane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <children>
-                        <Pane fx:id="calendar_pane" prefHeight="200.0" prefWidth="200.0" />
+                  <StackPane fx:id="calendarfx_pane" prefHeight="150.0" prefWidth="200.0" />
+                  <Pane fx:id="stats_pane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text layoutX="134.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest" wrappingWidth="293.47010803222656" />
+                     </children>
+                  </Pane>
                     </children>
                 </StackPane>
             </center>

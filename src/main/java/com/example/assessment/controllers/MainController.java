@@ -50,7 +50,10 @@ public class MainController {
     private StackPane main_pane;
 
     @FXML
-    private Pane calendar_pane;
+    private Pane calendarfx_pane;
+
+    @FXML
+    private Pane stats_pane;
     private boolean calendarBtnBool;
 
     public void initialize() {
@@ -67,7 +70,8 @@ public class MainController {
         detailedWeekView.setShowToday(false);
         detailedWeekView.setEarlyLateHoursStrategy(DayViewBase.EarlyLateHoursStrategy.HIDE);
 
-        main_pane.getChildren().addAll(calendarView); // introPane);
+        calendarfx_pane.getChildren().addAll(calendarView); // introPane);
+        calendarfx_pane.toFront();
     }
 
     @FXML
@@ -121,6 +125,10 @@ public class MainController {
             stats_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
             stats_btn.setStyle("-fx-background-color:#74A7BB;");
         }
+
+        stats_pane.toFront();
+
+
 
     }
 
