@@ -20,10 +20,11 @@
       <version>18.0.2</version>
     </dependency>
 <dependency>
-        <groupId>com.calendarfx.view</groupId>
-        <artifactId>calendarfx</artifactId>
-        <version>11.12.7</version>
-         </dependency>
+    <groupId>com.calendarfx</groupId>
+    <artifactId>view</artifactId>
+    <version>11.8.3</version>
+</dependency>
+
 <dependency>
         <groupId>fr.brouillard.oss.cssfx</groupId>
         <artifactId>brouillard</artifactId>
