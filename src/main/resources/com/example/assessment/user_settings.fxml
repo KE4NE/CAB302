@@ -140,10 +140,11 @@
                      <font>
                         <Font name="Dubai Light" size="14.0" />
                      </font></Text>
-                  <TextField fx:id="Username" promptText="Change username (test)">
+                  <TextField fx:id="Username" promptText="Enter Username">
                      <font>
                         <Font name="Dubai Light" size="16.0" />
                      </font></TextField>
+                  <PasswordField fx:id="Current_Password" promptText="Enter Current Password" />
                   <PasswordField fx:id="Password" promptText="Change password" />
                   <PasswordField fx:id="Password_confirm" promptText="Confirm password" />
                   <HBox prefHeight="100.0" prefWidth="200.0">

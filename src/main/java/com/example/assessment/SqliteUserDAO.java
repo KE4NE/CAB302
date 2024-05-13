@@ -63,6 +63,28 @@ public class SqliteUserDAO implements UserDAOInterface {
     }
 
     @Override
+    public boolean changeUser(String username, String password, String currentpass) {
+        String passwordSalt = CryptographyHelper.generateSalt();
+        String securePassword = CryptographyHelper.hashPassword(password, passwordSalt);
+        UserAccount testUser = new UserAccount(username,password, false);
+        if (!testUser.valid) {
+            return false;
+        }
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE UserAccounts"  +
+                            "SET hashedPassword =?"
+                            " WHERE username =?");
+            statement.setString(1, username);
+            statement.setString(2, securePassword);
+            statement.setString(3, passwordSalt);
+            statement.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }
+    @Override
     public UserAccount verifyUser(String username, String password) {
         String retrievedPassword, retrievedSalt;
         UserAccount testUser = new UserAccount(username,password,  true);

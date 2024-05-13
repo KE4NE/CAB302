@@ -52,7 +52,7 @@ public class SettingsController {
 
     @FXML
     private TextField Username;
-
+    private PasswordField Current_Password;
     @FXML
     private PasswordField Password;
 
@@ -177,6 +177,7 @@ public class SettingsController {
     @FXML
     protected void change_password_clicked() throws IOException {
         String usernameText = Username.getText();
+        String currentpassText = Current_Password.getText();
         String passwordText = Password.getText();
         String confirmPassText = Password_confirm.getText();
         Stage stage = (Stage) settings_btn.getScene().getWindow();
@@ -185,11 +186,11 @@ public class SettingsController {
             return;
         }
         if (confirmPassText.equals(passwordText)) {
-            boolean userAdded = userDAO.addUser(usernameText, passwordText);
+            boolean userAdded = userDAO.changeUser(usernameText, passwordText, currentpassText);
             if (!userAdded) {
                 new PopUp("Error: Username already exists or password too short.", stage);
             } else {
-                new PopUp("Account Created Successfully.", stage);
+                new PopUp("Password changed successfully.", stage);
             }
         } else {
             new PopUp("Error: Provided passwords differ.",
