@@ -66,7 +66,7 @@ public class SqliteUserDAO implements UserDAOInterface {
     public boolean changeUser(String username, String password, String currentpass) {
         String passwordSalt = CryptographyHelper.generateSalt();
         String securePassword = CryptographyHelper.hashPassword(password, passwordSalt);
-        UserAccount testUser = new UserAccount(username,password, false);
+        UserAccount testUser = new UserAccount(username,currentpass, true);
         if (!testUser.valid) {
             return false;
         }

@@ -53,6 +53,7 @@ public class SettingsController {
 
     @FXML
     private TextField Username;
+    @FXML
     private PasswordField Current_Password;
     @FXML
     private PasswordField Password;
