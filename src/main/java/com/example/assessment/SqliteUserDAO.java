@@ -73,11 +73,11 @@ public class SqliteUserDAO implements UserDAOInterface {
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "UPDATE UserAccounts"  +
-                            "SET hashedPassword =?"
+                            "SET hashedPassword =?" +
                             " WHERE username =?");
-            statement.setString(1, username);
-            statement.setString(2, securePassword);
-            statement.setString(3, passwordSalt);
+            statement.setString(1, securePassword);
+            statement.setString(2, username);
+       //     statement.setString(3, passwordSalt);
             statement.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
