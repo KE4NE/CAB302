@@ -3,6 +3,7 @@ package com.example.assessment.controllers;
 import com.example.assessment.HelloApplication;
 import com.example.assessment.PopUp;
 import com.example.assessment.SqliteUserDAO;
+import com.example.assessment.UserAccount;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -61,6 +62,7 @@ public class SettingsController {
     private SqliteUserDAO userDAO = new SqliteUserDAO();
 
     private boolean calendarBtnBool;
+    public static UserAccount authenticatedUser;
 
     public void initialize() {
         calendarSelected();
@@ -178,19 +180,25 @@ public class SettingsController {
     protected void change_password_clicked() throws IOException {
         String usernameText = Username.getText();
         String currentpassText = Current_Password.getText();
-        String passwordText = Password.getText();
+        String newpassText = Password.getText();
         String confirmPassText = Password_confirm.getText();
         Stage stage = (Stage) settings_btn.getScene().getWindow();
-        if (usernameText.isEmpty() || passwordText.isEmpty()) {
+        if (usernameText.isEmpty() || newpassText.isEmpty()) {
             new PopUp("Error: Password or Username cannot be empty", stage);
             return;
         }
-        if (confirmPassText.equals(passwordText)) {
-            boolean userAdded = userDAO.changeUser(usernameText, passwordText, currentpassText);
-            if (!userAdded) {
-                new PopUp("Error: Username already exists or password too short.", stage);
+        if (confirmPassText.equals(newpassText)) {
+            authenticatedUser = userDAO.verifyUser(usernameText, currentpassText);
+            if (authenticatedUser.valid) {
+                boolean userChanged = userDAO.changeUser(usernameText, newpassText, currentpassText);
+                if (!userChanged) {
+                    new PopUp("Error: Unable to change Password.", stage);
+                } else {
+                    new PopUp("Password changed successfully.", stage);
+                }
             } else {
-                new PopUp("Password changed successfully.", stage);
+                new PopUp("Error: Current details incorrect.",
+                        stage);
             }
         } else {
             new PopUp("Error: Provided passwords differ.",
