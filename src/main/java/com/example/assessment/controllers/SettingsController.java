@@ -1,6 +1,8 @@
 package com.example.assessment.controllers;
 
 import com.example.assessment.HelloApplication;
+import com.example.assessment.PopUp;
+import com.example.assessment.SqliteUserDAO;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -47,6 +49,16 @@ public class SettingsController {
 
     @FXML
     private HBox menu_hbox;
+
+    @FXML
+    private TextField Username;
+
+    @FXML
+    private PasswordField Password;
+
+    @FXML
+    private PasswordField Password_confirm;
+    private SqliteUserDAO userDAO = new SqliteUserDAO();
 
     private boolean calendarBtnBool;
 
@@ -160,5 +172,28 @@ public class SettingsController {
         stage.setTitle("Main page");
         setScene(stage, "main_menu.fxml", SettingsController.WIDTH, SettingsController.HEIGHT);
         stage.centerOnScreen();
+    }
+
+    @FXML
+    protected void change_password_clicked() throws IOException {
+        String usernameText = Username.getText();
+        String passwordText = Password.getText();
+        String confirmPassText = Password_confirm.getText();
+        Stage stage = (Stage) settings_btn.getScene().getWindow();
+        if (usernameText.isEmpty() || passwordText.isEmpty()) {
+            new PopUp("Error: Password or Username cannot be empty", stage);
+            return;
+        }
+        if (confirmPassText.equals(passwordText)) {
+            boolean userAdded = userDAO.addUser(usernameText, passwordText);
+            if (!userAdded) {
+                new PopUp("Error: Username already exists or password too short.", stage);
+            } else {
+                new PopUp("Account Created Successfully.", stage);
+            }
+        } else {
+            new PopUp("Error: Provided passwords differ.",
+                    stage);
+        }
     }
 }
