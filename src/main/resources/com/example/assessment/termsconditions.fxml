@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="843.0" stylesheets="@main_sheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.TermsConditionsController">
+    <children>
+        <BorderPane layoutY="-2.0" prefHeight="576.0" prefWidth="845.0">
+            <top>
+                <HBox prefHeight="73.0" prefWidth="819.0" style="-fx-background-color: #C7D4D9;" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox fillHeight="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="89.0" prefWidth="260.0">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@logo.jpeg" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets left="10.0" top="10.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="StudyScheduler" textAlignment="CENTER" wrappingWidth="190.0">
+                                    <font>
+                                        <Font name="Dubai Light" size="29.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets top="15.0" />
+                                    </HBox.margin>
+                                </Text>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="settings_hbox" alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="859.0">
+                            <children>
+                                <Button fx:id="settings_btn" maxWidth="-Infinity" minHeight="-Infinity" mnemonicParsing="false" opacity="0.0">
+                                    <font>
+                                        <Font name="Dubai Light" size="20.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="hoverItem" />
+                                        <String fx:value="mainButton" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children></HBox>
+            </top>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Terms and Conditions" fx:id="title">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Dubai Light" size="24.0" />
+                            </font>
+                        </Text>
+                        <ScrollPane prefHeight="291.0" prefWidth="645.0" stylesheets="@main_sheet.css" fx:id="terms_conditions_display">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="649.0">
+                                    <children>
+                                        <Text layoutY="-13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="22.13671875" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </ScrollPane>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Button id="accept_btn" fx:id="accept_btn" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" stylesheets="@main_sheet.css" text="Accept">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets top="50.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button id="decline_btn" fx:id="decline_btn" mnemonicParsing="false" prefHeight="28.0" prefWidth="127.0" stylesheets="@main_sheet.css" text="Decline">
+                                    <font>
+                                        <Font name="Century Gothic" size="16.0" />
+                                    </font>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <HBox.margin>
+                                        <Insets left="30.0" top="50.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </center>
+            <left>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+            </left>
+            <right>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+            </right>
+        </BorderPane>
+        <Button layoutX="-52.0" layoutY="64.0" mnemonicParsing="false" text="Button" />
+    </children>
+</AnchorPane>
