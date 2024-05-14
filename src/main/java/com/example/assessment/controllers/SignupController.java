@@ -60,6 +60,7 @@ public class SignupController {
                 new PopUp("Error: Username already exists or password too short.", stage);
             }
             else {
+                //add terms and conditions view here for user to accept here
                 new PopUp("Account Created Successfully.", stage);
             }
         } else {
