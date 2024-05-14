@@ -40,7 +40,7 @@ public class TermsConditionsController {
             BufferedReader in = new BufferedReader(new FileReader("Terms_and_Conditions.txt"));
             String str;
             while ((str = in.readLine()) != null){
-                System.out.println(str);
+                //System.out.println(str);
                 content.appendText(str);
             }
             in.close();
