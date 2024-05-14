@@ -5,6 +5,8 @@ import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.*;
+import com.example.assessment.HelloApplication;
+import com.example.assessment.SqliteEntryDAO;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
@@ -13,6 +15,8 @@ public class CalendarFXController {
 
     @FXML
     private StackPane calendarPane;
+
+    private static SqliteEntryDAO calendarDAO = new SqliteEntryDAO();
 
     private CalendarView calendarView;
 
@@ -75,12 +79,14 @@ public class CalendarFXController {
 
     private void storeCalendarEvent(CalendarEvent e) {
         Entry newEntry = e.getEntry();
-
+        String currUser = HelloController.authenticatedUser.getUsername();
         String title = newEntry.getTitle();
         String id = newEntry.getId();
         String startDate = String.valueOf(newEntry.getStartDate());
+        String endDate = String.valueOf(newEntry.getEndDate());
         String startTime = String.valueOf(newEntry.getStartTime());
         String endTime = String.valueOf(newEntry.getEndTime());
+        calendarDAO.addEntry(currUser, id, title, startDate, endDate, startTime, endTime);
     }
 
 
