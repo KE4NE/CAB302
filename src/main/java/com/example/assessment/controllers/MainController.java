@@ -44,7 +44,7 @@ public class MainController {
     private void applyHoverStyle(HBox hbox, Button btn, boolean hover) {
         String bgColor = hover ? "#74A7BB" : "#C7D4D9";
         String borderStyle = hover ? "1 0 1 0" : "0 0 1 0";
-        hbox.setStyle(String.format("-fx-background-color:%s; -fx-border-color: black; -fx-border-width:%s;", bgColor, borderStyle));
+        hbox.setStyle(String.format("-fx-background-color:%s; -fx-border-color: black;", bgColor));
         btn.setStyle(String.format("-fx-background-color:%s;", bgColor));
     }
 
