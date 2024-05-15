@@ -61,7 +61,43 @@ public class SqliteUserDAO implements UserDAOInterface {
         }
         return false;
     }
-
+    public String retrieve(String username, String password,String currentpass) {
+        String securePassword, passwordSalt;
+       // UserAccount testUser = new UserAccount(username,currentpass, true);
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT salt FROM UserAccounts" +
+                            " WHERE username=?");
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            passwordSalt = resultSet.getString("salt");
+            securePassword = CryptographyHelper.hashPassword(password, passwordSalt);
+        } catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+        return securePassword;
+    }
+    @Override
+    public boolean changeUser(String username, String password, String currentpass) {
+        String securePassword;
+        UserAccount testUser = new UserAccount(username,currentpass, true);
+        if (!testUser.valid) {
+            return false;
+        }
+       securePassword = retrieve(username, password, currentpass);
+        try{
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE UserAccounts "+
+                            "SET hashedPassword =?" +
+                            " WHERE username =?");
+            statement.setString(1, securePassword);
+            statement.setString(2, username);
+            statement.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }
     @Override
     public UserAccount verifyUser(String username, String password) {
         String retrievedPassword, retrievedSalt;

@@ -136,32 +136,20 @@
                      <font>
                         <Font name="Dubai Light" size="24.0" />
                      </font></Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Display settings">
-                     <font>
-                        <Font name="Dubai Light" size="14.0" />
-                     </font>
-                  </Text>
-                  <RadioButton mnemonicParsing="false" text="Enable Night Mode" />
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ChoiceBox prefHeight="25.0" prefWidth="45.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font Size" />
-                     </children>
-                  </HBox>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account settings" wrappingWidth="120.13671875">
                      <font>
                         <Font name="Dubai Light" size="14.0" />
                      </font></Text>
-                  <TextField promptText="Change email">
+                  <TextField fx:id="Username" promptText="Enter Username">
                      <font>
                         <Font name="Dubai Light" size="16.0" />
                      </font></TextField>
-                  <TextField promptText="Change Password" />
-                  <TextField promptText="Confirm new Password" />
-                  <TextField prefHeight="32.0" prefWidth="682.0" promptText="Confirm Password" />
+                  <PasswordField fx:id="Current_Password" promptText="Enter Current Password" />
+                  <PasswordField fx:id="Password" promptText="Change password" />
+                  <PasswordField fx:id="Password_confirm" promptText="Confirm password" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="139.0" text="Save Settings">
+                        <Button fx:id="Settings_btn" mnemonicParsing="false" onAction="#change_password_clicked" prefHeight="55.0" prefWidth="171.0" text="Change Password">
                            <font>
                               <Font name="Dubai Light" size="18.0" />
                            </font></Button>

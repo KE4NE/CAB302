@@ -23,6 +23,10 @@ public class MockUserDAO implements UserDAOInterface{
         }
         return false;
     }
+    @Override
+    public boolean changeUser(String username, String password, String currentpass){
+        return true;
+    }
 
     @Override
     public UserAccount verifyUser(String username, String password) {
