@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="calendarPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" prefHeight="200.0" prefWidth="200.0" fx:controller="com.example.assessment.controllers.CalendarFXController">
+    <!-- Content -->
+</StackPane>

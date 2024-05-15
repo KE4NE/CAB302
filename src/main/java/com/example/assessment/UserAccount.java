@@ -24,7 +24,7 @@ public class UserAccount {
         if (existing) {
             this.valid = userDAO.correctPassword(username, password);
         } else {
-            boolean usernameUnique = this.uniqueUsername(username);
+            boolean usernameUnique = this.checkUsername(username);
             boolean validPassword = this.checkPassword(password);
             this.valid = usernameUnique && validPassword;
         }
@@ -43,8 +43,8 @@ public class UserAccount {
         return this.password;
     }
 
-    private boolean uniqueUsername(String username) {
-        return userDAO.numberOfAccounts(username) == 0;
+    private boolean checkUsername(String username) {
+        return userDAO.numberOfAccounts(username) == 0 && !username.isEmpty();
     }
 
     private boolean checkPassword(String password) {

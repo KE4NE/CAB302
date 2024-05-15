@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox fx:id="timerPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.TimerController" prefHeight="200.0" prefWidth="200.0" stylesheets="@timer.css" style="-fx-background-color: white;">
+    <padding>
+        <Insets top="30" right="20" bottom="40" left="20"/>
+    </padding>
+    <HBox alignment="CENTER_LEFT">
+        <Label text="Study Timer" style="-fx-font-family: 'Jura'; -fx-font-size: 20;"/>
+    </HBox>
+    <VBox alignment="CENTER" style="-fx-font-family: 'Jura'; -fx-background-color: white;">
+        <Label fx:id="sessionLabel" text="SESSION" style="-fx-font-size: 24; -fx-padding: 15 0 0 0;"/>
+        <Label fx:id="timeLabel" text="25:00" style="-fx-font-size: 96;"/>
+        <HBox spacing="40" alignment="CENTER" fx:id="buttonContainer" style="-fx-padding: 0 0 15 0;">
+            <Button fx:id="startButton" text="Start" onAction="#startTimer" minWidth="160" minHeight="50" styleClass="timer-button"/>
+            <Button fx:id="pauseButton" text="Pause" onAction="#pauseTimer" minWidth="160" minHeight="50" visible="false" managed="false" styleClass="timer-button"/>
+            <Button fx:id="resetButton" text="Reset" onAction="#resetTimer" minWidth="160" minHeight="50" visible="false" managed="false" styleClass="timer-button"/>
+        </HBox>
+    </VBox>
+    <HBox spacing="45" alignment="CENTER">
+        <VBox alignment="CENTER" spacing="10" style="-fx-font-family: 'Jura'; -fx-background-color: white; -fx-padding: 10;">
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="decreaseBreak" text="-" onAction="#decreaseBreakLength" style="-fx-font-size: 20; -fx-font-family: 'Jura';" minWidth="40" minHeight="40" styleClass="timer-button"/>
+                <Label fx:id="breakLength" text="5" minWidth="50" minHeight="40" style="-fx-font-size: 32; -fx-alignment: center;"/>
+                <Button fx:id="increaseBreak" text="+" onAction="#increaseBreakLength" style="-fx-font-size: 20; -fx-font-family: 'Jura';" minWidth="40" minHeight="40" styleClass="timer-button"/>
+            </HBox>
+            <Label text="BREAK LENGTH" style="-fx-font-family: 'Jura'; -fx-font-size: 20;"/>
+        </VBox>
+        <VBox alignment="CENTER" spacing="10" style="-fx-font-family: 'Jura'; -fx-background-color: white; -fx-padding: 10;">
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="decreaseSession" text="-" onAction="#decreaseSessionLength" style="-fx-font-size: 20; -fx-font-family: 'Jura';" minWidth="40" minHeight="40" styleClass="timer-button"/>
+                <Label fx:id="sessionLength" text="25" minWidth="50" minHeight="40" style="-fx-font-size: 32; -fx-alignment: center;"/>
+                <Button fx:id="increaseSession" text="+" onAction="#increaseSessionLength" style="-fx-font-size: 20; -fx-font-family: 'Jura';" minWidth="40" minHeight="40" styleClass="timer-button"/>
+            </HBox>
+            <Label text="SESSION LENGTH" style="-fx-font-family: 'Jura'; -fx-font-size: 20;"/>
+        </VBox>
+    </HBox>
+</VBox>
