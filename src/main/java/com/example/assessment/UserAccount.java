@@ -44,7 +44,7 @@ public class UserAccount {
     }
 
     private boolean uniqueUsername(String username) {
-        return userDAO.numberOfAccounts(username) == 0;
+        return userDAO.numberOfAccounts(username) == 0 && !username.isEmpty();
     }
 
     private boolean checkPassword(String password) {
