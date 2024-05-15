@@ -11,6 +11,8 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class CalendarFXController {
@@ -101,12 +103,15 @@ public class CalendarFXController {
         for (ArrayList<String> entry : DBEntries) {
             String entryID = entry.get(0);
             String title = entry.get(1);
-            String startDate = entry.get(2);
-            String endDate = entry.get(3);
-            String startTime = entry.get(4);
-            String endTime = entry.get(5);
+            LocalDate startDate = LocalDate.parse(entry.get(2));
+            LocalDate endDate = LocalDate.parse(entry.get(3));
+            LocalTime startTime = LocalTime.parse(entry.get(4));
+            LocalTime endTime = LocalTime.parse(entry.get(5));
             Entry loadedEntry = new Entry();
             loadedEntry.setId(entryID);
+            loadedEntry.setTitle(title);
+            loadedEntry.setInterval(startDate, startTime, endDate, endTime);
+            calendar.addEntry(loadedEntry);
         }
     }
 
