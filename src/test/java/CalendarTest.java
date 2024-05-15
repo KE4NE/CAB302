@@ -11,8 +11,9 @@ class CalendarTest {
         UserAccount.userDAO = new MockUserDAO();
     }
 
+    // This is a placeholder test. It needs to be implemented.
     @Test
-    void passwordTooShort() {
+    void CreateCalendarEvent() {
         // Password too short.
         UserAccount user = new UserAccount("Test", "pass", false);
         assertFalse(user.valid);
