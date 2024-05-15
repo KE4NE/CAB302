@@ -11,6 +11,8 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
 
+import java.util.ArrayList;
+
 public class CalendarFXController {
 
     @FXML
@@ -70,6 +72,7 @@ public class CalendarFXController {
         detailedWeekView.setShowToday(false);
         detailedWeekView.setEarlyLateHoursStrategy(DayViewBase.EarlyLateHoursStrategy.HIDE);
 
+        loadDBEntries(calendar);
         calendarPane.getChildren().add(calendarView);
     }
 
@@ -87,6 +90,24 @@ public class CalendarFXController {
         String startTime = String.valueOf(newEntry.getStartTime());
         String endTime = String.valueOf(newEntry.getEndTime());
         calendarDAO.addEntry(currUser, id, title, startDate, endDate, startTime, endTime);
+    }
+
+
+    public void loadDBEntries(Calendar calendar) {
+        String currUser = HelloController.authenticatedUser.getUsername();
+        ArrayList<ArrayList<String>> DBEntries = calendarDAO.retrieveEntries(currUser);
+//        String entryID, title, startDate, endDate, startTime, endTime;
+        System.out.println(DBEntries);
+        for (ArrayList<String> entry : DBEntries) {
+            String entryID = entry.get(0);
+            String title = entry.get(1);
+            String startDate = entry.get(2);
+            String endDate = entry.get(3);
+            String startTime = entry.get(4);
+            String endTime = entry.get(5);
+            Entry loadedEntry = new Entry();
+            loadedEntry.setId(entryID);
+        }
     }
 
 

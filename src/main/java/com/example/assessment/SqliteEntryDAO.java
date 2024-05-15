@@ -1,6 +1,7 @@
 package com.example.assessment;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class SqliteEntryDAO implements EntryDAOInterface {
 
@@ -33,7 +34,40 @@ public class SqliteEntryDAO implements EntryDAOInterface {
 
     @Override
     public void removeEntry(String username, String id) {
-
+        return;
     }
+
+    @Override
+    public ArrayList<ArrayList<String>> retrieveEntries(String username) {
+        String entryID, title, startDate, endDate, startTime, endTime;
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT * FROM UserEntries" +
+                            " WHERE username=?");
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
+            while (resultSet.next()) {
+                ArrayList<String> entryDetail = new ArrayList<String>();
+                entryID = resultSet.getString("entryID");
+                title = resultSet.getString("title");
+                startDate = resultSet.getString("startDate");
+                endDate = resultSet.getString("endDate");
+                startTime = resultSet.getString("startTime");
+                endTime = resultSet.getString("endTime");
+                entryDetail.add(entryID);
+                entryDetail.add(title);
+                entryDetail.add(startDate);
+                entryDetail.add(endDate);
+                entryDetail.add(startTime);
+                entryDetail.add(endTime);
+                resultList.add(entryDetail);
+            }
+            return resultList;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
