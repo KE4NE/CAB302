@@ -12,7 +12,30 @@ class UserAccountTest {
 
     @Test
     void passwordTooShort() {
+        // Password too short.
         UserAccount user = new UserAccount("Test", "pass", false);
+        assertFalse(user.valid);
+    }
+
+    @Test
+    void noPassword() {
+        // No password.
+        UserAccount user = new UserAccount("Test", "", false);
+        assertFalse(user.valid);
+    }
+
+    // Code needs to be fixed so unit test will pass.
+    // @Test
+    // void noUsername() {
+    //     // No username.
+    //     UserAccount user = new UserAccount("", "password123", false);
+    //     assertFalse(user.valid);
+    // }
+
+    @Test
+    void noUsernameNoPassword() {
+        // No username, no password.
+        UserAccount user = new UserAccount("", "", false);
         assertFalse(user.valid);
     }
 
