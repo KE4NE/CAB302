@@ -18,7 +18,7 @@ class UserAccountTest {
     }
 
     @Test
-    void passwordTooShort() {
+    void noPassword() {
         // No password.
         UserAccount user = new UserAccount("Test", "", false);
         assertFalse(user.valid);
