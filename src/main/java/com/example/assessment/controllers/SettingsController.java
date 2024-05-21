@@ -5,6 +5,7 @@ import com.example.assessment.PopUp;
 import com.example.assessment.SqliteUserDAO;
 import com.example.assessment.UserAccount;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
@@ -28,13 +29,10 @@ public class SettingsController {
     private HBox calendar_hbox;
 
     @FXML
-    private HBox stats_hbox;
+    private HBox timer_hbox;
 
     @FXML
     private HBox settings_hbox;
-
-    @FXML
-    private Button stats_btn;
 
     @FXML
     private HBox logout_hbox;
@@ -44,6 +42,15 @@ public class SettingsController {
 
     @FXML
     private Button settings_btn;
+
+    @FXML
+    private Button timer_btn;
+
+    @FXML
+    private TimerController timerController;
+
+    @FXML
+    private boolean timerBtnBool;
 
     @FXML
     private Button menu_btn;
@@ -69,6 +76,13 @@ public class SettingsController {
         calendarSelected();
     }
 
+    private void applyHoverStyle(HBox hbox, Button btn, boolean hover) {
+        String bgColor = hover ? "#74A7BB" : "#C7D4D9";
+        String borderStyle = hover ? "1 0 1 0" : "0 0 1 0";
+        hbox.setStyle(String.format("-fx-background-color:%s; -fx-border-color: black;", bgColor));
+        btn.setStyle(String.format("-fx-background-color:%s;", bgColor));
+    }
+
     @FXML
     protected void logoutClicked() throws IOException {
         Stage stage = (Stage) logout_btn.getScene().getWindow();
@@ -82,19 +96,10 @@ public class SettingsController {
         calendar_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:1 0 1 0");
         calendar_btn.setStyle("-fx-background-color:#5F7882;");
 
-        stats_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-        stats_btn.setStyle("-fx-background-color: #C7D4D9");
+        timer_hbox.setStyle("-fx-background-color:#C7D4D9;");
+        timer_btn.setStyle("-fx-background-color: #C7D4D9");
     }
 
-    @FXML
-    protected void statisticsSelected() {
-        calendarBtnBool = false;
-        stats_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:0 0 1 0");
-        stats_btn.setStyle("-fx-background-color:#5F7882;");
-
-        calendar_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:1 0 1 0");
-        calendar_btn.setStyle("-fx-background-color:#C7D4D9;");
-    }
 
     @FXML
     protected void hoveredCalendarBtn() {
@@ -113,22 +118,39 @@ public class SettingsController {
         }
     }
 
-    @FXML
-    protected void hoveredStatsBtn() {
-        if (calendarBtnBool) {
-            stats_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
-            stats_btn.setStyle("-fx-background-color:#74A7BB;");
-        }
 
+    @FXML
+    protected void timerSelected() {
+        timerBtnBool = true;
+        calendarBtnBool = false;
+        timer_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:0 0 1 0");
+        timer_btn.setStyle("-fx-background-color:#5F7882;");
+
+        calendar_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:1 0 1 0");
+        calendar_btn.setStyle("-fx-background-color:#C7D4D9;");
+
+        if (timerController != null) {
+            Node timerPane = timerController.getTimerPane();
+            if (timerPane != null) {
+                timerPane.toFront();
+            }
+        }
     }
 
     @FXML
-    protected void exitedStatsBtn() {
+    protected void hoveredTimerBtn() {
         if (calendarBtnBool) {
-            stats_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-            stats_btn.setStyle("-fx-background-color:#C7D4D9;");
+            applyHoverStyle(timer_hbox, timer_btn, true);
         }
     }
+
+    @FXML
+    protected void exitedTimerBtn() {
+        if (calendarBtnBool) {
+            applyHoverStyle(timer_hbox, timer_btn, false);
+        }
+    }
+
     @FXML
     protected void hoveredLogoutBtn() {
         logout_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
