@@ -50,13 +50,10 @@ public class SettingsController {
     private TimerController timerController;
 
     @FXML
+    private CalendarFXController calendarfxController;
+
+    @FXML
     private boolean timerBtnBool;
-
-    @FXML
-    private Button menu_btn;
-
-    @FXML
-    private HBox menu_hbox;
 
     @FXML
     private TextField Username;
@@ -93,28 +90,33 @@ public class SettingsController {
     @FXML
     protected void calendarSelected() {
         calendarBtnBool = true;
+        timerBtnBool = false;
         calendar_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:1 0 1 0");
         calendar_btn.setStyle("-fx-background-color:#5F7882;");
 
         timer_hbox.setStyle("-fx-background-color:#C7D4D9;");
         timer_btn.setStyle("-fx-background-color: #C7D4D9");
+
+        if (calendarfxController != null) {
+            Node calendarPane = calendarfxController.getCalendarPane();
+            if (calendarPane != null) {
+                calendarPane.toFront();
+            }
+        }
     }
 
 
     @FXML
     protected void hoveredCalendarBtn() {
         if (!calendarBtnBool) {
-            calendar_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:1 0 1 0");
-            calendar_btn.setStyle("-fx-background-color:#74A7BB;");
+            applyHoverStyle(calendar_hbox, calendar_btn, true);
         }
-
     }
 
     @FXML
     protected void exitedCalendarBtn() {
         if (!calendarBtnBool) {
-            calendar_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:1 0 1 0");
-            calendar_btn.setStyle("-fx-background-color:#C7D4D9;");
+            applyHoverStyle(calendar_hbox, calendar_btn, false);
         }
     }
 
@@ -177,26 +179,6 @@ public class SettingsController {
     @FXML
     protected void exitedSettingsBtn() {
         settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-    }
-
-    @FXML
-    protected void hoveredMainMenuBtn(){
-        menu_hbox.setStyle("-fx-background-color:#74A7BB");
-        menu_btn.setStyle("-fx-background-color:#74A7BB");
-    }
-
-    @FXML
-    protected void exitedMainMenuBtn(){
-        menu_hbox.setStyle("-fx-background-color:#C7D4D9");
-        menu_btn.setStyle("-fx-background-color:#C7D4D9");
-    }
-
-    @FXML
-    protected void MainMenuClicked() throws IOException{
-        Stage stage = (Stage) menu_btn.getScene().getWindow();
-        stage.setTitle("Main page");
-        setScene(stage, "main_menu.fxml", SettingsController.WIDTH, SettingsController.HEIGHT);
-        stage.centerOnScreen();
     }
 
     @FXML
