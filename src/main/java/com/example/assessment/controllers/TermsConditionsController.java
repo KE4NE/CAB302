@@ -26,9 +26,6 @@ public class TermsConditionsController {
     private Button decline_btn;
 
     @FXML
-    private ScrollPane terms_conditions_display;
-
-    @FXML
     private Text title;
 
     @FXML
@@ -37,11 +34,10 @@ public class TermsConditionsController {
     //function to load text file containing Ts&Cs, and append each line to ScrollPane
     public void initialize(){
         try{
-            BufferedReader in = new BufferedReader(new FileReader("Terms_and_Conditions.txt"));
-            String str;
-            while ((str = in.readLine()) != null){
-                //System.out.println(str);
-                content.appendText(str);
+            BufferedReader in = new BufferedReader(new FileReader("Assessment Documents/Terms_and_Conditions.txt"));
+            String line;
+            while ((line = in.readLine()) != null){
+                content.appendText(line + "\n");
             }
             in.close();
         }
@@ -53,15 +49,16 @@ public class TermsConditionsController {
     @FXML
     protected void acceptClicked() throws IOException {
         Stage stage = (Stage) accept_btn.getScene().getWindow();
-        setScene(stage, "startup_view.fxml", SettingsController.WIDTH, SettingsController.HEIGHT);
+        setScene(stage, "startup_view.fxml", HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.centerOnScreen();
+        new PopUp("Account Created Successfully.", stage);
     }
 
     //If decline button pressed, show pop up that it needs to be accepted
     @FXML
     protected void declineClicked() throws IOException {
         Stage stage = (Stage) decline_btn.getScene().getWindow();
-        new PopUp("Please accept Terms and Conditions to create account", stage);
+        new PopUp("Please accept Terms and Conditions to proceed", stage);
 
     }
 

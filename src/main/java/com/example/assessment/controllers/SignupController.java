@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.assessment.SceneHelper.setScene;
+
 public class SignupController {
     @FXML
     private Label welcomeText;
@@ -61,7 +63,9 @@ public class SignupController {
             }
             else {
                 //add terms and conditions view here for user to accept here
-                new PopUp("Account Created Successfully.", stage);
+                setScene(stage, "termsconditions.fxml", MainController.WIDTH, MainController.HEIGHT);
+                stage.centerOnScreen();
+
             }
         } else {
             new PopUp("Error: Provided passwords differ.",
