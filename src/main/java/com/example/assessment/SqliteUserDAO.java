@@ -65,7 +65,46 @@ public class SqliteUserDAO implements UserDAOInterface {
         }
         return false;
     }
-
+    // This method encrypts the given new password using the previous SALT. It is necessary to encrypt the password using the old salt
+    // as the salt will remain unchanged in the database which will cause errors when the user tries to log in if a new salt was used
+    // The newly encrypted password is passed back to change user
+    public String new_password(String username, String password) {
+        String securePassword, passwordSalt;
+        try {
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT salt FROM UserAccounts" +
+                            " WHERE username=?");
+            statement.setString(1, username);
+            ResultSet resultSet = statement.executeQuery();
+            passwordSalt = resultSet.getString("salt");
+            securePassword = CryptographyHelper.hashPassword(password, passwordSalt);
+        } catch(SQLException e){
+            throw new RuntimeException(e);
+        }
+        return securePassword;
+    }
+    //This method takes the new encrypted password from the new_password method and replaces the old password associated with the user with the new password
+    @Override
+    public boolean changeUser(String username, String password, String currentpassword) {
+        String securePassword;
+        UserAccount testUser = new UserAccount(username,currentpassword, true);
+        if (!testUser.valid) {
+            return false;
+        }
+       securePassword = new_password(username, password);
+        try{
+            PreparedStatement statement = connection.prepareStatement(
+                    "UPDATE UserAccounts "+
+                            "SET hashedPassword =?" +
+                            " WHERE username =?");
+            statement.setString(1, securePassword);
+            statement.setString(2, username);
+            statement.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }
     @Override
     public UserAccount verifyUser(String username, String password) {
         String retrievedPassword, retrievedSalt;

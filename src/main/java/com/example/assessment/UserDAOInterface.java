@@ -21,6 +21,8 @@ public interface UserDAOInterface{
      * @param password The password of the user.
      * @return A UserAccount object if the credentials are valid, or a new UserAccount object if not.
      */
+    public boolean changeUser(String username, String password, String currentpass);
+
     public UserAccount verifyUser(String username, String password);
 
     /**

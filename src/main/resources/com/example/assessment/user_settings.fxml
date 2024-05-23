@@ -40,9 +40,9 @@
                                 <Insets bottom="10.0" top="10.0" />
                             </padding>
                         </HBox>
-                        <HBox fx:id="stats_hbox" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
+                        <HBox fx:id="timer_hbox" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" prefHeight="52.0" prefWidth="163.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="hoverItem" stylesheets="@main_sheet.css">
                             <children>
-                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fitHeight="150.0" fitWidth="45.0" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@stats.png" />
                                     </image>
@@ -50,7 +50,7 @@
                                         <Insets left="10.0" />
                                     </HBox.margin>
                                 </ImageView>
-                                <Button fx:id="stats_btn" mnemonicParsing="false" onAction="#statisticsSelected" onMouseEntered="#hoveredStatsBtn" onMouseExited="#exitedStatsBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Statistics">
+                                <Button fx:id="timer_btn" mnemonicParsing="false" onAction="#timerSelected" onMouseEntered="#hoveredTimerBtn" onMouseExited="#exitedTimerBtn" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: #C7D4D9;" text="Timer">
                                     <font>
                                         <Font name="Dubai Light" size="20.0" />
                                     </font>
@@ -87,9 +87,9 @@
                     </children></VBox>
             </left>
             <top>
-                <HBox prefHeight="86.0" prefWidth="318.0" style="-fx-background-color: #C7D4D9;" BorderPane.alignment="CENTER">
+                <HBox prefHeight="73.0" prefWidth="819.0" style="-fx-background-color: #C7D4D9;" BorderPane.alignment="CENTER">
                     <children>
-                        <HBox fx:id="menu_hbox" fillHeight="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="289.0">
+                        <HBox fillHeight="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="89.0" prefWidth="260.0">
                             <children>
                                 <ImageView fitHeight="150.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -99,19 +99,19 @@
                                         <Insets left="10.0" top="10.0" />
                                     </HBox.margin>
                                 </ImageView>
-                                <Button fx:id="menu_btn" alignment="TOP_LEFT" mnemonicParsing="false" onMouseClicked="#MainMenuClicked" onMouseEntered="#hoveredMainMenuBtn" onMouseExited="#exitedMainMenuBtn" prefHeight="65.0" prefWidth="220.0" style="-fx-background-color: #C7D4D9;" text="StudyScheduler">
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="StudyScheduler" textAlignment="CENTER" wrappingWidth="190.0">
                                     <font>
-                                        <Font name="Dubai Light" size="26.0" />
+                                        <Font name="Dubai Light" size="29.0" />
                                     </font>
                                     <HBox.margin>
-                                        <Insets bottom="5.0" top="15.0" />
+                                        <Insets top="15.0" />
                                     </HBox.margin>
-                                </Button>
+                                </Text>
                             </children>
                         </HBox>
                   <HBox fx:id="settings_hbox" alignment="CENTER_RIGHT" prefHeight="73.0" prefWidth="859.0">
                       <children>
-                          <Button fx:id="settings_btn" mnemonicParsing="false" opacity="0.0">
+                          <Button fx:id="settings_btn" mnemonicParsing="false" maxWidth="-Infinity" minHeight="-Infinity" opacity="0.0">
                               <font>
                                   <Font name="Dubai Light" size="20.0" />
                               </font>
@@ -136,32 +136,20 @@
                      <font>
                         <Font name="Dubai Light" size="24.0" />
                      </font></Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Display settings">
-                     <font>
-                        <Font name="Dubai Light" size="14.0" />
-                     </font>
-                  </Text>
-                  <RadioButton mnemonicParsing="false" text="Enable Night Mode" />
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <ChoiceBox prefHeight="25.0" prefWidth="45.0" />
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font Size" />
-                     </children>
-                  </HBox>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account settings" wrappingWidth="120.13671875">
                      <font>
                         <Font name="Dubai Light" size="14.0" />
                      </font></Text>
-                  <TextField promptText="Change email">
+                  <TextField fx:id="Username" promptText="Enter Username">
                      <font>
                         <Font name="Dubai Light" size="16.0" />
                      </font></TextField>
-                  <TextField promptText="Change Password" />
-                  <TextField promptText="Confirm new Password" />
-                  <TextField prefHeight="32.0" prefWidth="682.0" promptText="Confirm Password" />
+                  <PasswordField fx:id="Current_Password" promptText="Enter Current Password" />
+                  <PasswordField fx:id="Password" promptText="Change password" />
+                  <PasswordField fx:id="Password_confirm" promptText="Confirm password" />
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="139.0" text="Save Settings">
+                        <Button fx:id="Settings_btn" mnemonicParsing="false" onAction="#change_password_clicked" prefHeight="55.0" prefWidth="171.0" text="Change Password">
                            <font>
                               <Font name="Dubai Light" size="18.0" />
                            </font></Button>

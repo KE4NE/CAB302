@@ -1,7 +1,11 @@
 package com.example.assessment.controllers;
 
 import com.example.assessment.HelloApplication;
+import com.example.assessment.PopUp;
+import com.example.assessment.SqliteUserDAO;
+import com.example.assessment.UserAccount;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
@@ -25,13 +29,10 @@ public class SettingsController {
     private HBox calendar_hbox;
 
     @FXML
-    private HBox stats_hbox;
+    private HBox timer_hbox;
 
     @FXML
     private HBox settings_hbox;
-
-    @FXML
-    private Button stats_btn;
 
     @FXML
     private HBox logout_hbox;
@@ -43,15 +44,40 @@ public class SettingsController {
     private Button settings_btn;
 
     @FXML
-    private Button menu_btn;
+    private Button timer_btn;
 
     @FXML
-    private HBox menu_hbox;
+    private TimerController timerController;
+
+    @FXML
+    private CalendarFXController calendarfxController;
+
+    @FXML
+    private boolean timerBtnBool;
+
+    @FXML
+    private TextField Username;
+    @FXML
+    private PasswordField Current_Password;
+    @FXML
+    private PasswordField Password;
+
+    @FXML
+    private PasswordField Password_confirm;
+    private SqliteUserDAO userDAO = new SqliteUserDAO();
 
     private boolean calendarBtnBool;
+    public static UserAccount authenticatedUser;
 
     public void initialize() {
         calendarSelected();
+    }
+// Code for when you hover over the button the style changes to make the button darker.
+    private void applyHoverStyle(HBox hbox, Button btn, boolean hover) {
+        String bgColor = hover ? "#74A7BB" : "#C7D4D9";
+        String borderStyle = hover ? "1 0 1 0" : "0 0 1 0";
+        hbox.setStyle(String.format("-fx-background-color:%s; -fx-border-color: black;", bgColor));
+        btn.setStyle(String.format("-fx-background-color:%s;", bgColor));
     }
 
     @FXML
@@ -64,56 +90,69 @@ public class SettingsController {
     @FXML
     protected void calendarSelected() {
         calendarBtnBool = true;
+        timerBtnBool = false;
         calendar_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:1 0 1 0");
         calendar_btn.setStyle("-fx-background-color:#5F7882;");
 
-        stats_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-        stats_btn.setStyle("-fx-background-color: #C7D4D9");
+        timer_hbox.setStyle("-fx-background-color:#C7D4D9;");
+        timer_btn.setStyle("-fx-background-color: #C7D4D9");
+
+        if (calendarfxController != null) {
+            Node calendarPane = calendarfxController.getCalendarPane();
+            if (calendarPane != null) {
+                calendarPane.toFront();
+            }
+        }
     }
 
-    @FXML
-    protected void statisticsSelected() {
-        calendarBtnBool = false;
-        stats_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:0 0 1 0");
-        stats_btn.setStyle("-fx-background-color:#5F7882;");
-
-        calendar_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:1 0 1 0");
-        calendar_btn.setStyle("-fx-background-color:#C7D4D9;");
-    }
 
     @FXML
     protected void hoveredCalendarBtn() {
         if (!calendarBtnBool) {
-            calendar_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:1 0 1 0");
-            calendar_btn.setStyle("-fx-background-color:#74A7BB;");
+            applyHoverStyle(calendar_hbox, calendar_btn, true);
         }
-
     }
 
     @FXML
     protected void exitedCalendarBtn() {
         if (!calendarBtnBool) {
-            calendar_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:1 0 1 0");
-            calendar_btn.setStyle("-fx-background-color:#C7D4D9;");
+            applyHoverStyle(calendar_hbox, calendar_btn, false);
+        }
+    }
+
+
+    @FXML
+    protected void timerSelected() {
+        timerBtnBool = true;
+        calendarBtnBool = false;
+        timer_hbox.setStyle("-fx-background-color:#5F7882; -fx-border-color: black; -fx-border-width:0 0 1 0");
+        timer_btn.setStyle("-fx-background-color:#5F7882;");
+
+        calendar_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:1 0 1 0");
+        calendar_btn.setStyle("-fx-background-color:#C7D4D9;");
+
+        if (timerController != null) {
+            Node timerPane = timerController.getTimerPane();
+            if (timerPane != null) {
+                timerPane.toFront();
+            }
         }
     }
 
     @FXML
-    protected void hoveredStatsBtn() {
+    protected void hoveredTimerBtn() {
         if (calendarBtnBool) {
-            stats_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
-            stats_btn.setStyle("-fx-background-color:#74A7BB;");
+            applyHoverStyle(timer_hbox, timer_btn, true);
         }
-
     }
 
     @FXML
-    protected void exitedStatsBtn() {
+    protected void exitedTimerBtn() {
         if (calendarBtnBool) {
-            stats_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
-            stats_btn.setStyle("-fx-background-color:#C7D4D9;");
+            applyHoverStyle(timer_hbox, timer_btn, false);
         }
     }
+
     @FXML
     protected void hoveredLogoutBtn() {
         logout_hbox.setStyle("-fx-background-color:#74A7BB; -fx-border-color: black; -fx-border-width:0 0 1 0");
@@ -141,24 +180,36 @@ public class SettingsController {
     protected void exitedSettingsBtn() {
         settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
     }
-
+// Code for when the user wants to change their password. The user must enter information into 4 text boxes inputting their current username
+    // and password and then inputting their new password before inputting it again to confirm. The current details are needed in order to verify
+    // that this is the current user as well as to pass these details onto the verifyuser method. If verifyuser fails or any of the boxes are empty an error message will appear
     @FXML
-    protected void hoveredMainMenuBtn(){
-        menu_hbox.setStyle("-fx-background-color:#74A7BB");
-        menu_btn.setStyle("-fx-background-color:#74A7BB");
-    }
-
-    @FXML
-    protected void exitedMainMenuBtn(){
-        menu_hbox.setStyle("-fx-background-color:#C7D4D9");
-        menu_btn.setStyle("-fx-background-color:#C7D4D9");
-    }
-
-    @FXML
-    protected void MainMenuClicked() throws IOException{
-        Stage stage = (Stage) menu_btn.getScene().getWindow();
-        stage.setTitle("Main page");
-        setScene(stage, "main_menu.fxml", SettingsController.WIDTH, SettingsController.HEIGHT);
-        stage.centerOnScreen();
+    protected void change_password_clicked() throws IOException {
+        String usernameText = Username.getText();
+        String currentpassText = Current_Password.getText();
+        String newpassText = Password.getText();
+        String confirmPassText = Password_confirm.getText();
+        Stage stage = (Stage) settings_btn.getScene().getWindow();
+        if (usernameText.isEmpty() || newpassText.isEmpty()) {
+            new PopUp("Error: Password or Username cannot be empty", stage);
+            return;
+        }
+        if (confirmPassText.equals(newpassText)) {
+            authenticatedUser = userDAO.verifyUser(usernameText, currentpassText);
+            if (authenticatedUser.valid) {
+                boolean userChanged = userDAO.changeUser(usernameText, newpassText, currentpassText);
+                if (!userChanged) {
+                    new PopUp("Error: Unable to change Password.", stage);
+                } else {
+                    new PopUp("Password changed successfully.", stage);
+                }
+            } else {
+                new PopUp("Error: Current details incorrect.",
+                        stage);
+            }
+        } else {
+            new PopUp("Error: Provided passwords differ.",
+                    stage);
+        }
     }
 }

@@ -1,7 +1,8 @@
 import com.example.assessment.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-class TimerTest {
+
+class CalendarTest {
 
     //public UserDAOInterface userDAO = new MockUserDAO();
 
@@ -12,7 +13,7 @@ class TimerTest {
 
     // This is a placeholder test. It needs to be implemented.
     @Test
-    void StartNewTimer() {
+    void CreateCalendarEvent() {
         // Password too short.
         UserAccount user = new UserAccount("Test", "pass", false);
         assertFalse(user.valid);
