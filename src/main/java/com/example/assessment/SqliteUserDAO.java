@@ -1,17 +1,20 @@
 package com.example.assessment;
 
-import com.google.common.hash.Hashing;
-
-import java.nio.charset.StandardCharsets;
 import java.sql.*;
-import java.util.Random;
 
+/**
+ * Implementation of the UserDAOInterface for SQLite database.
+ * Manages user-related database operations such as adding users, verifying passwords, and retrieving user accounts.
+ */
 public class SqliteUserDAO implements UserDAOInterface {
 
     Connection connection;
 
     private final String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
+    /**
+     * Constructs a SqliteUserDAO object and initializes the database connection.
+     */
     public SqliteUserDAO() {
         this.connection = DatabaseConnection.getInstance();
     }
@@ -39,6 +42,7 @@ public class SqliteUserDAO implements UserDAOInterface {
         return true;
     }
 
+    @Override
     public boolean correctPassword(String username, String password) {
         String retrievedPassword, retrievedSalt;
         if (numberOfAccounts(username) != 1) {

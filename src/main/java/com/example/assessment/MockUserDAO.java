@@ -3,6 +3,10 @@ package com.example.assessment;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Mock implementation of the UserDAOInterface for testing purposes.
+ * Manages user-related operations using in-memory lists instead of a database.
+ */
 public class MockUserDAO implements UserDAOInterface{
 
     public List<UserAccount> Users = new ArrayList<>();

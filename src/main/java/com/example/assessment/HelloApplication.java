@@ -5,8 +5,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.sql.Connection;
 import java.io.IOException;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 import static com.example.assessment.SceneHelper.setScene;
 

@@ -3,10 +3,17 @@ package com.example.assessment;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * Implementation of the EntryDAOInterface for SQLite database.
+ * Manages entry-related database operations such as adding entries and retrieving entries.
+ */
 public class SqliteEntryDAO implements EntryDAOInterface {
 
     Connection connection;
 
+    /**
+     * Constructs a SqliteEntryDAO object and initializes the database connection.
+     */
     public SqliteEntryDAO () {
         this.connection = DatabaseConnection.getInstance();
     }
