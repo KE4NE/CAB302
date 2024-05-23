@@ -72,7 +72,7 @@ public class SettingsController {
     public void initialize() {
         calendarSelected();
     }
-
+// Code for when you hover over the button the style changes to make the button darker.
     private void applyHoverStyle(HBox hbox, Button btn, boolean hover) {
         String bgColor = hover ? "#74A7BB" : "#C7D4D9";
         String borderStyle = hover ? "1 0 1 0" : "0 0 1 0";
@@ -180,7 +180,9 @@ public class SettingsController {
     protected void exitedSettingsBtn() {
         settings_hbox.setStyle("-fx-background-color:#C7D4D9; -fx-border-color: black; -fx-border-width:0 0 1 0");
     }
-
+// Code for when the user wants to change their password. The user must enter information into 4 text boxes inputting their current username
+    // and password and then inputting their new password before inputting it again to confirm. The current details are needed in order to verify
+    // that this is the current user as well as to pass these details onto the verifyuser method. If verifyuser fails or any of the boxes are empty an error message will appear
     @FXML
     protected void change_password_clicked() throws IOException {
         String usernameText = Username.getText();
