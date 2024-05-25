@@ -17,21 +17,38 @@ import java.io.IOException;
 
 import static com.example.assessment.SceneHelper.setScene;
 
+/**
+ * Controller to provide functionality to the Terms and Conditions page
+ */
 public class TermsConditionsController {
 
+    /**
+     * Accept button to accept terms and conditions
+     */
     @FXML
     private Button accept_btn;
 
+    /**
+     * Decline button to reject terms and conditions
+     */
     @FXML
     private Button decline_btn;
 
+    /**
+     * Title and header of the page, displays 'Terms and Conditions'
+     */
     @FXML
     private Text title;
 
+    /**
+     * Text area where the contents of the terms and conditions text file is displayed
+     */
     @FXML
     private TextArea content;
 
-    //function to load text file containing Ts&Cs, and append each line to ScrollPane
+    /**
+     * Load terms and conditions in a text file into the text area
+     */
     public void initialize(){
         try{
             BufferedReader in = new BufferedReader(new FileReader("Assessment Documents/Terms_and_Conditions.txt"));
@@ -45,7 +62,10 @@ public class TermsConditionsController {
 
     }
 
-    //Open view of log in when accepted button pressed
+    /**
+     * Open view of the login page when the Accept button is pressed
+     * @throws IOException
+     */
     @FXML
     protected void acceptClicked() throws IOException {
         Stage stage = (Stage) accept_btn.getScene().getWindow();
@@ -54,7 +74,10 @@ public class TermsConditionsController {
         new PopUp("Account Created Successfully.", stage);
     }
 
-    //If decline button pressed, show pop up that it needs to be accepted
+    /**
+     * Displays pop up that Accept button needs to be pressed, if Decline button is pressed
+     * @throws IOException
+     */
     @FXML
     protected void declineClicked() throws IOException {
         Stage stage = (Stage) decline_btn.getScene().getWindow();
