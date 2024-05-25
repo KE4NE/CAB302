@@ -5,6 +5,7 @@ import com.example.assessment.PopUp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.BufferedReader;
@@ -14,22 +15,40 @@ import java.io.IOException;
 import static com.example.assessment.SceneHelper.setScene;
 
 /**
+<<<<<<< HEAD
  * Controller class for handling user interactions with the Terms and Conditions page.
+=======
+ * Controller to provide functionality to the Terms and Conditions page
+>>>>>>> 9302deabc01b3844999721782974a1f380a4eeb5
  */
 public class TermsConditionsController {
 
+    /**
+     * Accept button to accept terms and conditions
+     */
     @FXML
     private Button accept_btn;
 
+    /**
+     * Decline button to reject terms and conditions
+     */
     @FXML
     private Button decline_btn;
 
+    /**
+     * Title and header of the page, displays 'Terms and Conditions'
+     */
+    @FXML
+    private Text title;
+
+    /**
+     * Text area where the contents of the terms and conditions text file is displayed
+     */
     @FXML
     private TextArea content;
 
     /**
-     * Initializes the Terms and Conditions page.
-     * Loads the Terms and Conditions text file and displays its content in the TextArea.
+     * Load terms and conditions in a text file into the text area
      */
     public void initialize(){
         try{
@@ -45,8 +64,7 @@ public class TermsConditionsController {
     }
 
     /**
-     * Handles the accept button click event.
-     * Navigates the user back to the login page and shows a success popup.
+     * Open view of the login page when the Accept button is pressed
      *
      * @throws IOException if there is an error loading the login page.
      */
@@ -59,8 +77,7 @@ public class TermsConditionsController {
     }
 
     /**
-     * Handles the decline button click event.
-     * Shows a popup indicating that the Terms and Conditions must be accepted to proceed.
+     * Displays pop up that Accept button needs to be pressed, if Decline button is pressed
      *
      * @throws IOException if there is an error displaying the popup.
      */
