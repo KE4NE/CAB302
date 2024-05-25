@@ -5,8 +5,8 @@ import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.*;
-import com.example.assessment.HelloApplication;
 import com.example.assessment.SqliteEntryDAO;
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
@@ -27,45 +27,51 @@ public class CalendarFXController {
     private Object addCalendarEntry(Object evt) {
         return evt;
     }
+
     @FXML
     public void initialize() {
-        Calendar calendar = new Calendar("Default");
+        new Thread(() -> {
+            Calendar calendar = new Calendar("Default");
 
+            EventHandler<CalendarEvent> handler = evt -> storeCalendarEvent(evt, calendar);
 
-        EventHandler<CalendarEvent> handler = evt -> storeCalendarEvent(evt);
+            calendar.addEventHandler(handler);
 
+//             create the calendar source and attach the calendar
+            CalendarSource source = new CalendarSource("Default");
+            source.getCalendars().add(calendar);
 
-        calendar.addEventHandler(handler);
+            // attach the source to the date control / calendar view.
+            calendarView = new CalendarView(CalendarView.Page.DAY, CalendarView.Page.WEEK);
+            calendarView.getCalendarSources().setAll(source);
 
-        // create the calendar source and attach the calendar
-        CalendarSource source = new CalendarSource("Default");
-        source.getCalendars().add(calendar);
+            Platform.runLater(() -> {
+                calendarView.showWeekPage();
+                calendarView.setEnableTimeZoneSupport(false);
+                calendarView.setCreateEntryClickCount(1);
 
-        // attach the source to the date control / calendar view.
-        CalendarView calendarView= new CalendarView(CalendarView.Page.DAY, CalendarView.Page.WEEK);
-        calendarView.getCalendarSources().add(source);
+                DetailedWeekView detailedWeekView = calendarView.getWeekPage().getDetailedWeekView();
+                WeekView weekView = detailedWeekView.getWeekView();
+                DayView dayView = calendarView.getDayPage().getDetailedDayView().getDayView();
 
+                detailedWeekView.setShowToday(false);
+                detailedWeekView.setEarlyLateHoursStrategy(DayViewBase.EarlyLateHoursStrategy.HIDE);
 
-        calendarView.showWeekPage();
-        calendarView.setEnableTimeZoneSupport(false);
-        calendarView.setCreateEntryClickCount(1);
-
-        DetailedWeekView detailedWeekView = calendarView.getWeekPage().getDetailedWeekView();
-        WeekView weekView = detailedWeekView.getWeekView();
-        DayView dayView = calendarView.getDayPage().getDetailedDayView().getDayView();
-
-        detailedWeekView.setShowToday(false);
-        detailedWeekView.setEarlyLateHoursStrategy(DayViewBase.EarlyLateHoursStrategy.HIDE);
-
-        loadDBEntries(calendar);
-        calendarPane.getChildren().add(calendarView);
+                loadDBEntries(calendar);
+                calendarPane.getChildren().add(calendarView);
+            });
+        }).start();
     }
 
     public StackPane getCalendarPane() {
         return calendarPane;
     }
 
-    private void storeCalendarEvent(CalendarEvent e) {
+    private void storeCalendarEvent(CalendarEvent e, Calendar calendar) {
+        System.out.println(e);
+        if (e.getSource() != calendar) {
+            System.out.println("ITEM BEING REMOVED");
+        }
         Entry newEntry = e.getEntry();
         String currUser = HelloController.authenticatedUser.getUsername();
         String title = newEntry.getTitle();
@@ -77,12 +83,10 @@ public class CalendarFXController {
         calendarDAO.addEntry(currUser, id, title, startDate, endDate, startTime, endTime);
     }
 
-
     public void loadDBEntries(Calendar calendar) {
         String currUser = HelloController.authenticatedUser.getUsername();
         ArrayList<ArrayList<String>> DBEntries = calendarDAO.retrieveEntries(currUser);
-//        String entryID, title, startDate, endDate, startTime, endTime;
-        System.out.println(DBEntries);
+        //System.out.println(DBEntries);
         for (ArrayList<String> entry : DBEntries) {
             String entryID = entry.get(0);
             String title = entry.get(1);
@@ -98,19 +102,9 @@ public class CalendarFXController {
         }
     }
 
-
-
     public void retrieveCalendarEntries() {
-//        Entry<String> entry = new Entry<>("Hello");
-//        entry.setInterval(LocalDate.now());
-//        entry.changeStartDate(LocalDate.now());
-//        entry.changeEndDate(LocalDate.now());
-//        entry.changeStartTime(LocalTime.of(12,30));
-//        entry.changeEndTime(LocalTime.of(13,30));
-//        calendar.addEntry(entry);
         return;
     }
-
 
     public void loadDBEntries() {
         return;
