@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -16,10 +15,10 @@ import java.io.IOException;
 
 import static com.example.assessment.SceneHelper.setScene;
 
+/**
+ * Controller class for handling user interactions on the sign-up page.
+ */
 public class SignupController {
-    @FXML
-    private Label welcomeText;
-
     @FXML
     private TextField username;
 
@@ -34,6 +33,12 @@ public class SignupController {
 
     private SqliteUserDAO userDAO = new SqliteUserDAO();
 
+    /**
+     * Handles the login button click event.
+     * Navigates the user back to the login page.
+     *
+     * @throws IOException if there is an error loading the login page.
+     */
     @FXML
     protected void loginClicked() throws IOException {
         // Will need to change the page here NOT IMPLEMENTED
@@ -44,6 +49,14 @@ public class SignupController {
         stage.centerOnScreen();
     }
 
+    /**
+     * Handles the sign-up button click event.
+     * Validates the user input and attempts to create a new user account.
+     * If successful, navigates the user to the terms and conditions page.
+     * Otherwise, displays an error popup.
+     *
+     * @throws IOException if there is an error loading the next scene.
+     */
     @FXML
     protected void signupClicked() throws IOException {
         // Retrieve text from sign-up page.

@@ -29,23 +29,6 @@ public class CalendarFXController {
     }
     @FXML
     public void initialize() {
-//        Calendar user = new Calendar("Default");
-
-
-
-//        EventHandler<CalendarEvent> handler = evt -> System.out.println(evt.hashCode());
-//        user.addEventHandler(handler);
-//
-//
-//        CalendarSource myCalendarSource = new CalendarSource("My Calendars"); // (4)
-//        myCalendarSource.getCalendars().addAll(user);
-//
-//        CalendarView calendarView = new CalendarView(CalendarView.Page.DAY, CalendarView.Page.WEEK);
-
-//        calendarView.setC
-//        calendarView.setCa(user);
-
-        // create the calendar and listen to all changes
         Calendar calendar = new Calendar("Default");
 
 
