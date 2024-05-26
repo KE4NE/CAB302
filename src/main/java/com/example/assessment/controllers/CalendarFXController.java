@@ -1,5 +1,4 @@
 package com.example.assessment.controllers;
-
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
@@ -11,7 +10,6 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.layout.StackPane;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -25,10 +23,10 @@ public class CalendarFXController {
 
     private CalendarView calendarView;
 
-    private Object addCalendarEntry(Object evt) {
-        return evt;
-    }
-
+    /**
+     * Initializes the calendar view in a separate thread.
+     * Sets up event handlers, attaches the calendar source, and loads existing database entries.
+     */
     @FXML
     public void initialize() {
         new Thread(() -> {
@@ -38,7 +36,7 @@ public class CalendarFXController {
 
             calendar.addEventHandler(handler);
 
-//             create the calendar source and attach the calendar
+            // create the calendar source and attach the calendar
             CalendarSource source = new CalendarSource("Default");
             source.getCalendars().add(calendar);
 
@@ -64,10 +62,22 @@ public class CalendarFXController {
         }).start();
     }
 
+    /**
+     * Gets the calendar pane.
+     *
+     * @return the StackPane containing the calendar view
+     */
     public StackPane getCalendarPane() {
         return calendarPane;
     }
 
+    /**
+     * Stores the calendar event in the database.
+     * Adds or removes entries based on the event source.
+     *
+     * @param e        the calendar event to store
+     * @param calendar the calendar where the event is stored
+     */
     private void storeCalendarEvent(CalendarEvent e, Calendar calendar) {
         String currUser = HelloController.authenticatedUser.getUsername();
         Entry newEntry = e.getEntry();
@@ -85,10 +95,14 @@ public class CalendarFXController {
         }
     }
 
+    /**
+     * Loads existing database entries into the calendar.
+     *
+     * @param calendar the calendar to load entries into
+     */
     public void loadDBEntries(Calendar calendar) {
         String currUser = HelloController.authenticatedUser.getUsername();
         ArrayList<ArrayList<String>> DBEntries = calendarDAO.retrieveEntries(currUser);
-        //System.out.println(DBEntries);
         for (ArrayList<String> entry : DBEntries) {
             String entryID = entry.get(0);
             String title = entry.get(1);
@@ -102,13 +116,5 @@ public class CalendarFXController {
             loadedEntry.setInterval(startDate, startTime, endDate, endTime);
             calendar.addEntry(loadedEntry);
         }
-    }
-
-    public void retrieveCalendarEntries() {
-        return;
-    }
-
-    public void loadDBEntries() {
-        return;
     }
 }

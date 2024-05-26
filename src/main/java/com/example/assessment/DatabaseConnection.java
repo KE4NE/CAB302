@@ -43,7 +43,7 @@ public class DatabaseConnection {
         try {
             Statement statement = instance.createStatement();
             statement.execute("CREATE TABLE IF NOT EXISTS UserAccounts(id integer primary key autoincrement, username text, hashedPassword text, salt text)");
-            statement.execute("CREATE TABLE UserEntries(username text, entryID text, title text, startDate text, endDate text, startTime text, endTime text, hidden int, PRIMARY KEY(username, entryID), UNIQUE(username, entryID))");
+            statement.execute("CREATE TABLE IF NOT EXISTS UserEntries(username text, entryID text, title text, startDate text, endDate text, startTime text, endTime text, hidden int, PRIMARY KEY(username, entryID), UNIQUE(username, entryID))");
         } catch (SQLException sqle) {
             System.err.println(sqle);
         }

@@ -59,7 +59,7 @@ public class HelloController {
      * @throws IOException if there is an error loading the main menu view.
      */
     @FXML
-    protected void loginClicked() throws IOException {
+    protected void loginClicked() throws IOException, InterruptedException {
         String usernameText = username.getText();
         String passwordText = password.getText();
         Stage stage = (Stage) login_btn.getScene().getWindow();

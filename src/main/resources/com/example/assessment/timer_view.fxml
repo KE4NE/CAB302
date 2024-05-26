@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.*?>
 
-<VBox fx:id="timerPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.TimerController" prefHeight="200.0" prefWidth="200.0" stylesheets="@timer.css" style="-fx-background-color: white;">
+<VBox fx:id="timerPane" fx:controller="com.example.assessment.controllers.TimerController" xmlns="http://javafx.com/javafx/18.0.2" xmlns:fx="http://javafx.com/fxml/1" prefHeight="200.0" prefWidth="200.0" stylesheets="@timer.css" style="-fx-background-color: white;">
     <padding>
         <Insets top="30" right="20" bottom="40" left="20"/>
     </padding>

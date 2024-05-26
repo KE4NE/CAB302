@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="settingsPane" alignment="CENTER" prefHeight="385.0" prefWidth="269.0" spacing="20.0" style="-fx-background-color: white;" stylesheets="@main_sheet.css" xmlns="http://javafx.com/javafx/18.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assessment.controllers.SettingsController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="300.0" top="20.0" />
+   </padding>
+   <children>
+      <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="User Settings" textAlignment="CENTER" wrappingWidth="183.0703125">
+         <font>
+            <Font name="Dubai Light" size="24.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account settings" textAlignment="CENTER" wrappingWidth="120.13671875">
+         <font>
+            <Font name="Dubai Light" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Username" promptText="Enter Username">
+         <font>
+            <Font name="Dubai Light" size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="Current_Password" promptText="Enter Current Password" />
+      <PasswordField fx:id="Password" promptText="Change password" />
+      <PasswordField fx:id="Password_confirm" promptText="Confirm password" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="settings_btn" mnemonicParsing="false" onAction="#change_password_clicked" prefHeight="55.0" prefWidth="171.0" text="Change Password">
+               <font>
+                  <Font name="Dubai Light" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

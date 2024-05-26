@@ -19,6 +19,13 @@ public class SqliteUserDAO implements UserDAOInterface {
         this.connection = DatabaseConnection.getInstance();
     }
 
+    /**
+     * Adds a new user to the database.
+     *
+     * @param username the username of the new user
+     * @param password the password of the new user
+     * @return true if the user is successfully added, false otherwise
+     */
     @Override
     public boolean addUser(String username, String password) {
         String passwordSalt = CryptographyHelper.generateSalt();
@@ -42,6 +49,13 @@ public class SqliteUserDAO implements UserDAOInterface {
         return true;
     }
 
+    /**
+     * Verifies if the provided password is correct for the given username.
+     *
+     * @param username the username of the user
+     * @param password the password to verify
+     * @return true if the password is correct, false otherwise
+     */
     @Override
     public boolean correctPassword(String username, String password) {
         String retrievedPassword, retrievedSalt;
@@ -56,7 +70,6 @@ public class SqliteUserDAO implements UserDAOInterface {
             ResultSet resultSet = statement.executeQuery();
             retrievedPassword = resultSet.getString("hashedPassword");
             retrievedSalt = resultSet.getString("salt");
-            System.out.println(retrievedPassword);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -65,9 +78,14 @@ public class SqliteUserDAO implements UserDAOInterface {
         }
         return false;
     }
-    // This method encrypts the given new password using the previous SALT. It is necessary to encrypt the password using the old salt
-    // as the salt will remain unchanged in the database which will cause errors when the user tries to log in if a new salt was used
-    // The newly encrypted password is passed back to change user
+
+    /**
+     * Encrypts the given new password using the existing salt of the user.
+     *
+     * @param username the username of the user
+     * @param password the new password to encrypt
+     * @return the encrypted password
+     */
     public String new_password(String username, String password) {
         String securePassword, passwordSalt;
         try {
@@ -83,7 +101,15 @@ public class SqliteUserDAO implements UserDAOInterface {
         }
         return securePassword;
     }
-    //This method takes the new encrypted password from the new_password method and replaces the old password associated with the user with the new password
+
+    /**
+     * Changes the password of an existing user.
+     *
+     * @param username the username of the user
+     * @param password the new password for the user
+     * @param currentpassword the current password of the user
+     * @return true if the password is successfully changed, false otherwise
+     */
     @Override
     public boolean changeUser(String username, String password, String currentpassword) {
         String securePassword;
@@ -105,11 +131,18 @@ public class SqliteUserDAO implements UserDAOInterface {
         }
         return true;
     }
+
+    /**
+     * Verifies the user's credentials.
+     *
+     * @param username the username of the user
+     * @param password the password of the user
+     * @return a UserAccount object if the credentials are valid, an empty UserAccount otherwise
+     */
     @Override
     public UserAccount verifyUser(String username, String password) {
         String retrievedPassword, retrievedSalt;
         UserAccount testUser = new UserAccount(username,password,  true);
-        System.out.println(testUser.valid);
         if (!testUser.valid) {
             return new UserAccount();
         }
@@ -121,7 +154,6 @@ public class SqliteUserDAO implements UserDAOInterface {
             ResultSet resultSet = statement.executeQuery();
             retrievedPassword = resultSet.getString("hashedPassword");
             retrievedSalt = resultSet.getString("salt");
-            System.out.println(retrievedPassword);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -131,6 +163,12 @@ public class SqliteUserDAO implements UserDAOInterface {
         return new UserAccount();
     }
 
+    /**
+     * Returns the number of accounts with the given username.
+     *
+     * @param username the username to check
+     * @return the number of accounts with the given username
+     */
     @Override
     public int numberOfAccounts(String username) {
         int numberAccounts;

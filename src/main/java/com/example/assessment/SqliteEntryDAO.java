@@ -31,7 +31,6 @@ public class SqliteEntryDAO implements EntryDAOInterface {
      */
     @Override
     public void addEntry(String username, String entryID, String title, String startDate, String endDate, String startTime, String endTime) {
-        System.out.println(startDate);
         PreparedStatement statement;
         try {
             statement = connection.prepareStatement(
