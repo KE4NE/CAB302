@@ -68,19 +68,20 @@ public class CalendarFXController {
     }
 
     private void storeCalendarEvent(CalendarEvent e, Calendar calendar) {
-        System.out.println(e);
-        if (e.getSource() != calendar) {
-            System.out.println("ITEM BEING REMOVED");
-        }
-        Entry newEntry = e.getEntry();
         String currUser = HelloController.authenticatedUser.getUsername();
+        Entry newEntry = e.getEntry();
         String title = newEntry.getTitle();
         String id = newEntry.getId();
-        String startDate = String.valueOf(newEntry.getStartDate());
-        String endDate = String.valueOf(newEntry.getEndDate());
-        String startTime = String.valueOf(newEntry.getStartTime());
-        String endTime = String.valueOf(newEntry.getEndTime());
-        calendarDAO.addEntry(currUser, id, title, startDate, endDate, startTime, endTime);
+        if (e.getSource() != calendar) {
+            calendarDAO.removeEntry(currUser, id);
+        }
+        else {
+            String startDate = String.valueOf(newEntry.getStartDate());
+            String endDate = String.valueOf(newEntry.getEndDate());
+            String startTime = String.valueOf(newEntry.getStartTime());
+            String endTime = String.valueOf(newEntry.getEndTime());
+            calendarDAO.addEntry(currUser, id, title, startDate, endDate, startTime, endTime);
+        }
     }
 
     public void loadDBEntries(Calendar calendar) {

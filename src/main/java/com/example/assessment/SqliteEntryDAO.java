@@ -24,8 +24,9 @@ public class SqliteEntryDAO implements EntryDAOInterface {
         PreparedStatement statement;
         try {
             statement = connection.prepareStatement(
-                    "INSERT OR REPLACE INTO UserEntries(username, entryID, title, startDate, endDate, startTime, endTime)" +
-                            " VALUES (?,?,?,?,?,?,?)");
+                    "INSERT OR REPLACE INTO UserEntries(username, entryID, title, startDate, endDate, startTime, endTime, hidden)" +
+                            " VALUES (?,?,?,?,?,?,?, 0)");
+            // value for 'hidden' is set to 0
             statement.setString(1, username);
             statement.setString(2, entryID);
             statement.setString(3, title);
@@ -41,7 +42,17 @@ public class SqliteEntryDAO implements EntryDAOInterface {
 
     @Override
     public void removeEntry(String username, String id) {
-        return;
+        PreparedStatement statement;
+        try {
+            statement = connection.prepareStatement(
+                    "UPDATE UserEntries SET hidden=1 WHERE username = ? AND entryID = ?");
+            // Update hidden value to 1.
+            statement.setString(1, username);
+            statement.setString(2, id);
+            statement.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        };
     }
 
     @Override
@@ -50,7 +61,8 @@ public class SqliteEntryDAO implements EntryDAOInterface {
         try {
             PreparedStatement statement = connection.prepareStatement(
                     "SELECT * FROM UserEntries" +
-                            " WHERE username=?");
+                            " WHERE username=? and hidden=0");
+            // Only retrieve entries which are not hidden.
             statement.setString(1, username);
             ResultSet resultSet = statement.executeQuery();
             ArrayList<ArrayList<String>> resultList = new ArrayList<ArrayList<String>>();
