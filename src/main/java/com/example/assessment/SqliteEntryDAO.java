@@ -18,6 +18,17 @@ public class SqliteEntryDAO implements EntryDAOInterface {
         this.connection = DatabaseConnection.getInstance();
     }
 
+    /**
+     * Adds a new entry to the database or updates an existing one.
+     *
+     * @param username  the username associated with the entry
+     * @param entryID   the unique ID of the entry
+     * @param title     the title of the entry
+     * @param startDate the start date of the entry
+     * @param endDate   the end date of the entry
+     * @param startTime the start time of the entry
+     * @param endTime   the end time of the entry
+     */
     @Override
     public void addEntry(String username, String entryID, String title, String startDate, String endDate, String startTime, String endTime) {
         System.out.println(startDate);
@@ -40,6 +51,12 @@ public class SqliteEntryDAO implements EntryDAOInterface {
         }
     }
 
+    /**
+     * Marks an entry as hidden in the database.
+     *
+     * @param username the username associated with the entry
+     * @param id       the unique ID of the entry
+     */
     @Override
     public void removeEntry(String username, String id) {
         PreparedStatement statement;
@@ -55,6 +72,12 @@ public class SqliteEntryDAO implements EntryDAOInterface {
         };
     }
 
+    /**
+     * Retrieves all visible entries for a specific user from the database.
+     *
+     * @param username the username for which to retrieve entries
+     * @return an ArrayList of ArrayLists, where each inner ArrayList represents an entry's details
+     */
     @Override
     public ArrayList<ArrayList<String>> retrieveEntries(String username) {
         String entryID, title, startDate, endDate, startTime, endTime;
@@ -87,6 +110,4 @@ public class SqliteEntryDAO implements EntryDAOInterface {
             throw new RuntimeException(e);
         }
     }
-
-
 }

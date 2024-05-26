@@ -5,6 +5,7 @@ import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.*;
+import com.example.assessment.EntryDAOInterface;
 import com.example.assessment.SqliteEntryDAO;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
@@ -20,7 +21,7 @@ public class CalendarFXController {
     @FXML
     private StackPane calendarPane;
 
-    private static SqliteEntryDAO calendarDAO = new SqliteEntryDAO();
+    public static EntryDAOInterface calendarDAO = new SqliteEntryDAO();
 
     private CalendarView calendarView;
 

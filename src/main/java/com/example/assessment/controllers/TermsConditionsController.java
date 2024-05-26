@@ -15,11 +15,7 @@ import java.io.IOException;
 import static com.example.assessment.SceneHelper.setScene;
 
 /**
-<<<<<<< HEAD
- * Controller class for handling user interactions with the Terms and Conditions page.
-=======
  * Controller to provide functionality to the Terms and Conditions page
->>>>>>> 9302deabc01b3844999721782974a1f380a4eeb5
  */
 public class TermsConditionsController {
 
@@ -85,7 +81,5 @@ public class TermsConditionsController {
     protected void declineClicked() throws IOException {
         Stage stage = (Stage) decline_btn.getScene().getWindow();
         new PopUp("Please accept Terms and Conditions to proceed", stage);
-
     }
-
 }

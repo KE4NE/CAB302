@@ -1,15 +1,26 @@
 import com.example.assessment.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Unit tests for the UserAccount class using the MockUserDAO.
+ * Tests the functionality of creating and validating user accounts.
+ */
 class UserAccountTest {
 
-    //public UserDAOInterface userDAO = new MockUserDAO();
-
+    /**
+     * Sets up the mock DAO before all tests are run.
+     * This method is executed once before any of the test methods.
+     */
     @BeforeAll
     static void changeDAO() {
         UserAccount.userDAO = new MockUserDAO();
     }
 
+    /**
+     * Tests the creation of a user account with a password that is too short.
+     * Verifies that the user account is not valid.
+     */
     @Test
     void passwordTooShort() {
         // Password too short.
@@ -17,6 +28,10 @@ class UserAccountTest {
         assertFalse(user.valid);
     }
 
+    /**
+     * Tests the creation of a user account with no password.
+     * Verifies that the user account is not valid.
+     */
     @Test
     void noPassword() {
         // No password.
@@ -24,6 +39,10 @@ class UserAccountTest {
         assertFalse(user.valid);
     }
 
+    /**
+     * Tests the creation of a user account with no username.
+     * Verifies that the user account is not valid.
+     */
      @Test
      void noUsername() {
          // No username.
@@ -31,6 +50,10 @@ class UserAccountTest {
          assertFalse(user.valid);
      }
 
+    /**
+     * Tests the creation of a user account with no username and no password.
+     * Verifies that the user account is not valid.
+     */
     @Test
     void noUsernameNoPassword() {
         // No username, no password.
@@ -38,6 +61,10 @@ class UserAccountTest {
         assertFalse(user.valid);
     }
 
+    /**
+     * Tests the creation of a user account with a duplicate username.
+     * Verifies that the user account is not valid if the username already exists.
+     */
     @Test
     void duplicateAccounts() {
         // Account under 'Keane' already exists in the database
@@ -45,6 +72,11 @@ class UserAccountTest {
         UserAccount user2 = new UserAccount("Keane", "pass123", false);
         assertFalse(user2.valid);
     }
+
+    /**
+     * Tests the creation of a valid new user account with a unique username and valid password.
+     * Verifies that the user account is valid.
+     */
     @Test
     void validNewAccount() {
         // Account with unique username and valid password
@@ -52,6 +84,10 @@ class UserAccountTest {
         assertTrue(user.valid);
     }
 
+    /**
+     * Tests the validation of an existing user account with the correct password.
+     * Verifies that the user account is valid.
+     */
     @Test
     void validExistingAccount() {
         // Account with existing username and correct password
@@ -60,6 +96,10 @@ class UserAccountTest {
         assertTrue(testUser.valid);
     }
 
+    /**
+     * Tests the validation of an existing user account with an incorrect password.
+     * Verifies that the user account is not valid.
+     */
     @Test
     void invalidExistingAccount() {
         // Existing account with incorrect password.
