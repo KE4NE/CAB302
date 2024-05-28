@@ -1,0 +1,910 @@
+commit 49435440e41a992b27c43c92cde96193241e9997
+Merge: 2035e5c 31567b0
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 15 14:06:31 2024 +1000
+
+    Merge pull request #3 from KE4NE/dev
+    
+    Merging Dev branch.
+
+commit 31567b0d5bfa6eb73e3009227d04e62a6742f64f
+Merge: 6367553 e862006
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 15 13:36:13 2024 +1000
+
+    Merging conflicts
+
+commit 2035e5c7e5a8363b7808ed03a2013ba527ca7fed
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 13:30:40 2024 +1000
+
+    New tests
+
+commit 5b39450360ca8280a435cd77d2cb468661740a6c
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 13:29:18 2024 +1000
+
+    New unit tests
+
+commit 6367553b117cb2304e2bb83b9179bc80d2cf6369
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 15 13:24:04 2024 +1000
+
+    Update maven.yml
+
+commit cec9b091f7feaac776c5a1637009ed5f15226bae
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 15 13:22:12 2024 +1000
+
+    Renamed check-username function
+
+commit e862006b100f5d3e716d19d7aa4ff35f481fc59a
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 15 13:20:58 2024 +1000
+
+    Update maven.yml
+
+commit d24c3b5b29b65819060ebfcad5c9540526a8ef87
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 15 13:20:04 2024 +1000
+
+    Fixed unit test-case
+
+commit 348c1b68944fd7a8c97e5b90a721e6ff9b49fc5f
+Merge: aedef62 034b6b3
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 15 13:17:19 2024 +1000
+
+    Merge branch 'dev' of https://github.com/KE4NE/CAB302 into dev
+
+commit aedef62160787b9edce7024b44f5e4f734650ebe
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 15 13:16:25 2024 +1000
+
+    Calendar entries saving successfully
+
+commit 034b6b35669cf1ffe84f73ac43389774f3b42627
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 13:15:55 2024 +1000
+
+    Updated User Tests
+
+commit 9e70db5988389164a084706d4448dcab40fe389b
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 13:14:17 2024 +1000
+
+    New Timer Logo
+
+commit c9c4b0241048be41108952629d837069f719a810
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 13:12:19 2024 +1000
+
+    Update Timer Logo
+
+commit e61eed2fdd1a2d3321e8bdd321a0354f41c76c0a
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 15 13:00:20 2024 +1000
+
+    Worked on further integrating calendar entries into DB & reloading values
+
+commit ec9dabee8ac3ccd3fe7ea4f3626eb390e8142b79
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 12:08:22 2024 +1000
+
+    Addition of TimerTest.java
+
+commit 9fef7773e9bd29c7babac663eeab72a85de1f5ca
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 12:06:13 2024 +1000
+
+    new user tests
+
+commit 6c2855b88371f0bd67e82d27fa44934155e15018
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 12:04:11 2024 +1000
+
+    new user tests
+
+commit f2d26ee9e0c1723bb5e57d0624935023260d5eb8
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 12:02:25 2024 +1000
+
+    new unit tests
+
+commit 71562cb9ce394149b1bc145a7edb7f527f707125
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 15 12:01:10 2024 +1000
+
+    New user tests
+
+commit cddcbebdf1670611d9bbed2d0777f8d6d3586551
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Tue May 14 16:33:11 2024 +1000
+
+    Worked on further storing calendar details within the DB via an EventHandler. Working on now re-importing these into the DB as well.
+
+commit 30ee833caf3e2640f71ea22687355a4fa57d5d98
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Tue May 14 15:26:41 2024 +1000
+
+    Worked on adding event-listeners for Calendar entries.
+
+commit 8adaedcc713714172eada4472c4820b94103ae2d
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Tue May 14 14:37:15 2024 +1000
+
+    T&C controller code fix up
+
+commit 92742584e198f47c4c30dc3f580775bcd637eb17
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Tue May 14 14:35:55 2024 +1000
+
+    T&C buttons functionality added
+
+commit eded95f5000c0245850597d16113970d5ccf0b48
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Tue May 14 13:54:12 2024 +1000
+
+    attempt to add T&C txt file to display
+
+commit b4821fdbce63860262fb995a81a5bbfc32e16e7a
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Tue May 14 11:30:46 2024 +1000
+
+    terms and conditions view and controller created
+
+commit bc64f3afd2d8f4f3d1aa741140a2f8ee8fa63965
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Mon May 13 12:40:31 2024 +1000
+
+    Bug Fixes
+
+commit 3d9666844b1312157fc13ff9e59e05643bd36043
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Mon May 13 12:30:11 2024 +1000
+
+    Added account authentication to password changes
+
+commit 736f4f2d5be5552266ed25b79082fa6772550f27
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Mon May 13 12:15:06 2024 +1000
+
+    method fixed
+
+commit 146830b97911ffd868ef14252155a1ebe53ec44f
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Mon May 13 12:10:56 2024 +1000
+
+    attempt to add method
+
+commit 864380ec65f8d748595ac0e5f11dbf23bf18bc20
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Mon May 13 10:40:06 2024 +1000
+
+    Initial verification for changing password
+
+commit 302f7e42add56b26ca8c2221a29d1e081944f004
+Author: Beau <beau.joesph.mitrov@gmail.com>
+Date:   Wed May 8 19:25:59 2024 +1000
+
+    Added timer, separated fxml/controllers to be more organised. refactored hover logic
+
+commit 38365e1c5c3bc3801a7b92c8109e452d0a74b2f3
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 17:37:31 2024 +1000
+
+    Update README.md
+
+commit 309a69b7eaaf05d4c9ed03dce2949fa1d185f91b
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 8 14:28:44 2024 +1000
+
+    Added partially working stacked-pane
+
+commit 2f3aaeaae4daed73a7e199c660c6ab74de9a7ff3
+Merge: 1f4809a 96f0616
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 8 14:06:20 2024 +1000
+
+    resolved conflicts
+
+commit 96f0616ceb407aca2257d4ef4ac887b8ec70bc43
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:45:21 2024 +1000
+
+    Update maven.yml
+
+commit 04823b0a211c05bcab06a9fe2426a33ace7b3022
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:41:43 2024 +1000
+
+    Update pom.xml
+
+commit 92ead4cf2590ea2a8c5c644a50907f11e69dac2b
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:39:59 2024 +1000
+
+    Update pom.xml
+
+commit 8ceb78d9397599108792a7d6ecc4d42fbf9f83ec
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:39:34 2024 +1000
+
+    Update pom.xml
+
+commit f58f05ccda6acf09f38bbf055ad5b63033b8135e
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:35:57 2024 +1000
+
+    Update pom.xml
+
+commit 46b4d6e74df0a43e1efec240399490eeb5562f37
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:34:17 2024 +1000
+
+    Update pom.xml
+
+commit bd40acfaa44ac77fb5d20a92c39dda98e14bf2c6
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:31:40 2024 +1000
+
+    Update pom.xml
+
+commit 10c3ac4edc3e7f2bb53496c18dec7eb11176b248
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:29:07 2024 +1000
+
+    Update pom.xml
+
+commit 0d5fd7b86bf6baee02b2358678a4a92b2eea9ef2
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:26:30 2024 +1000
+
+    Update pom.xml
+
+commit 1063a0698f39d21de3c7babebd54f5c6c88f8b60
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 8 13:09:01 2024 +1000
+
+    Update maven.yml
+
+commit d8b58fab18ce80566809f96b9bcd8ffdfd222c96
+Author: Beau <beau.joesph.mitrov@gmail.com>
+Date:   Fri May 3 20:57:05 2024 +1000
+
+    Improved timer precision on resume
+
+commit 749fb015a58361b4c3cf68633244fb2e21b54802
+Author: Beau <beau.joesph.mitrov@gmail.com>
+Date:   Thu May 2 02:39:02 2024 +1000
+
+    adding pause feature, refactored controller
+
+commit d7c98dc5219101f45772beddb66d89c9b2c7f5dd
+Author: Beau <beau.joesph.mitrov@gmail.com>
+Date:   Thu May 2 01:47:36 2024 +1000
+
+    added styling to match medium fidelity
+
+commit 8b2711d3b9f5d4769a37ab48b542a00ac907e9f3
+Author: Beau <beau.joesph.mitrov@gmail.com>
+Date:   Wed May 1 17:29:10 2024 +1000
+
+    Capitalised some labels
+
+commit cee40f8064757e6b87c08e18df6302ffe88e6879
+Author: Beau <beau.joesph.mitrov@gmail.com>
+Date:   Wed May 1 15:50:33 2024 +1000
+
+    Initial Commit
+    
+    Initial commit of study timer - fxml, controller, application.
+
+commit 574296cee2792824f63470a822f81c7bc8cf92bf
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:51:33 2024 +1000
+
+    Update maven.yml
+
+commit 3bfc3cd99ea2d073dae856132a04d3094b134548
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:50:47 2024 +1000
+
+    Update maven.yml
+
+commit 82f09d44c0ea7896c357d8377ddda52b26d44bd5
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:42:06 2024 +1000
+
+    Update maven.yml
+
+commit 57cb4a13508869cab7e91b540675a736c7e4f062
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:39:08 2024 +1000
+
+    Update maven.yml
+
+commit f324e6c52d8487f851da48ed0836517078e21323
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:33:34 2024 +1000
+
+    Update maven.yml
+
+commit 2fee2f2f97001adae8cd8ba19371414eb20b5628
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:20:01 2024 +1000
+
+    Update pom.xml
+
+commit a5424de353f16c3209ac399dd60ece1bc9a541ff
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:15:12 2024 +1000
+
+    Update maven.yml
+
+commit 0a4347ba0c8d2e3f323adde374bfcf040a654314
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 1 14:15:06 2024 +1000
+
+    Added updated assessment files for checkpoint
+
+commit 083ab563704582c19f832d651dffb90677abcdd3
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:13:26 2024 +1000
+
+    Create maven.yml
+
+commit 6f2ebf5fe9bf4adbee49c7ba420b1f691a847452
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:13:07 2024 +1000
+
+    Delete .github/workflows directory
+
+commit 3b8c04b6eb27e2a5d88b790e03b92dc2fdbd398e
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 14:11:28 2024 +1000
+
+    Update maven.yml
+
+commit 2832cfc48c12d52a222ad850507f884cbb96d2fc
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 1 14:09:39 2024 +1000
+
+    Update Maven.yml
+
+commit 49913b3a7c945b18774c7eb2800c25c8febca1f5
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 1 14:08:40 2024 +1000
+
+    update POM.xml
+
+commit 24cd613ab57ce23212d124c90553505afa1975d8
+Author: Mitchell-Lohmann <n11243252@qut.edu.au>
+Date:   Wed May 1 14:06:17 2024 +1000
+
+    unit test checks
+
+commit 70b9d4eaadaedc24eb1289d68ea033c2dbf166ff
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 13:58:09 2024 +1000
+
+    Update test.yml
+
+commit b8ad4ce8dd72c375c20a69109cf5f52dee2c0e6c
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 13:54:18 2024 +1000
+
+    Create maven.yml
+
+commit c2aacccc40a8fa575c270d69d4acfa34005e40c2
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 13:49:55 2024 +1000
+
+    Update test.yml
+
+commit 02f86d8b1be976c66253ad33b899da1fe2b26e01
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 13:42:52 2024 +1000
+
+    Update test.yml
+
+commit 0a34aa9af64afe8b09c0aa1896471e6d13dffc42
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 13:25:28 2024 +1000
+
+    Update README.md
+
+commit db25b414eb6262ea45a8210930b60613fb5c8656
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed May 1 13:22:24 2024 +1000
+
+    Create test.yml
+
+commit 59298f32e1ed65668c0205b9f281828980239182
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 1 01:31:16 2024 +1000
+
+    Calendar-fx based implementation
+
+commit 1f4809a35a6295c17d0d4f18c0f6362e9d674f57
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 1 01:27:05 2024 +1000
+
+    Fixed SqliteUserDAO, implemented CalendarFX into the main-menu.
+
+commit 37da8d7e85cd3c36e31e584ada7e21f53396cad9
+Merge: f938d4b 382463b
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Wed May 1 00:51:50 2024 +1000
+
+    resolve conflicts
+
+commit 382463b905c5905a571dfbcb40e8a5a8d36d279f
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Wed May 1 00:45:39 2024 +1000
+
+    functional main menu button added to current pages
+
+commit f938d4b4a5fac5cc0097213370e0eeeff56405ea
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed May 1 00:43:26 2024 +1000
+
+    Added calendarfx into maven plugins - retrieved jar files for implementation.
+
+commit 0b7fbe19457cf20062bee7f95b889e0cbb58a6e4
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Apr 29 23:09:18 2024 +1000
+
+    Formatted UserAccount & other code
+
+commit 7eaa386448bbeb6dabcf6e49557144113019c217
+Merge: 777564a 5c91088
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Apr 29 23:05:53 2024 +1000
+
+    Resolved conflicts
+
+commit 777564a5157cb3e0924c05ef8b898e082f220354
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Apr 29 23:03:23 2024 +1000
+
+    Testing-suite finalised.
+
+commit 5c910888f338f52f06f56b0bee66c23dedd38ded
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Mon Apr 29 21:26:21 2024 +1000
+
+    implemented main menu now accessible when logged in
+
+commit 6bb12b787d9b8ead4806c1be6f5b797668805730
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Mon Apr 29 16:39:04 2024 +1000
+
+    main menu view created
+
+commit 30bc1b2189a53cb72f730d618763d87d76e7d2c6
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Apr 29 15:16:32 2024 +1000
+
+    Worked on further implementing test-suite for user-creation testing with MockUserDAO. Fixed coupling and cohesion issues.
+
+commit d9838342dfdb83b812565ec62455c6e716ac069f
+Merge: 49afb9b 283f65b
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Apr 29 13:39:29 2024 +1000
+
+    Resolved Conflicts
+
+commit 49afb9b60f01bcf6caa422b9b0097883a9246366
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Apr 29 13:37:35 2024 +1000
+
+    Added testing suite for user accounts - need to fix coupling and cohesion related to design
+
+commit 283f65b1b960f2f52cc012aa6cdb7cc3f22ddf2f
+Author: css10212477 <cssirgunas@hotmail.com>
+Date:   Sun Apr 28 14:27:58 2024 +1000
+
+    added Beau as a member of the group
+
+commit f023eff4274d0744b070f7d23690ff22c6cc489f
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sat Apr 27 17:40:16 2024 +1000
+
+    Persistence Working
+
+commit fcee46d89eb7b16d794045e2c2e5291f4ca38128
+Merge: 1d1cbb8 b2e8766
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sat Apr 27 17:02:25 2024 +1000
+
+    Resolved conflicts with implementation
+
+commit b2e876667de49ffd6af84e242e1c4e0bcf4f5556
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sat Apr 27 16:50:38 2024 +1000
+
+    Incorporated account creation, account sign-up, error mesasges, etc
+
+commit 1f97d3822fcb27fa0d6d7ab584e9eada3ebc7e74
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Fri Apr 26 18:36:06 2024 +1000
+
+    Updated maven dependencies for database implementation
+
+commit 1d1cbb8a2552e420786eac72e4fe1c33eab1a4ea
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Fri Apr 26 18:31:22 2024 +1000
+
+    Updated maven project libraries for use.
+
+commit 9b35dde0498fe37f3381e0dc7fcc479eebd2bed7
+Author: Keane Asson <keane@asson.com.au>
+Date:   Thu Apr 25 23:37:06 2024 +1000
+
+    Refactored code, further implemented DB for user-creation.
+
+commit a384e691d37f55972b2b106398300e2636f3d1fc
+Author: Keane Asson <keane@asson.com.au>
+Date:   Thu Apr 25 21:16:08 2024 +1000
+
+    Worked on implementing database further, created tables & connection cursor.
+
+commit 81250faca075d5dfa8be8d68aee68a6aeee3e7dc
+Author: Keane Asson <keane@asson.com.au>
+Date:   Thu Apr 25 17:32:53 2024 +1000
+
+    Started implementation of database & user accounts for persistence.
+
+commit c360327a07be39c76679bb9081c42476d7c28933
+Merge: bc61d05 d53fb2e
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Thu Apr 25 13:50:05 2024 +1000
+
+    Merge pull request #1 from KE4NE/user_settings
+    
+    User settings page and links to page
+
+commit d53fb2eaab7c6e6433f06d62814b31312dbeba9e
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Thu Apr 25 13:48:37 2024 +1000
+
+    added elements to settings page
+
+commit e7eca9136d6d5eaedaadd45f9ceaf6a253c6ef9b
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Thu Apr 25 13:19:58 2024 +1000
+
+    fixed settings button
+
+commit be9dcbc80fd763195d07dcf7c2055a62a04d5a1e
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Thu Apr 25 12:36:20 2024 +1000
+
+    added settings icon and button to screens
+
+commit 09ec059a61c04320d8cb6b5557ff7eafd6f43fac
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Thu Apr 25 12:07:21 2024 +1000
+
+    settings page and icon
+
+commit 6598ac742ed665277cdebad5063ef59f7f262d87
+Author: Simon Wegener <simonwegener0@gmail.com>
+Date:   Thu Apr 25 11:39:19 2024 +1000
+
+    initial settings page
+
+commit bc61d0548a390ae8f4ea65f34873adccf878c242
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed Apr 17 14:31:52 2024 +1000
+
+    Added Checkpoint 2 Doc
+
+commit 4c0b7c97574477be51ab24b1a4985b91764f2b0c
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Apr 17 13:41:48 2024 +1000
+
+    Delete Assessment Documents/Colour directory
+
+commit de01eae6d4c5dee333afe446872e87bce66ecd71
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Apr 17 13:39:13 2024 +1000
+
+    Create test.txt
+
+commit 3c869208b3025691514985576c00ff66e19fc8c4
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Apr 17 13:38:52 2024 +1000
+
+    Delete Assessment Documents/Colours/test.txt
+
+commit f5412fbfb04d09d2a53750e795430b144b0a25da
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Apr 17 13:38:25 2024 +1000
+
+    Create tests.txt
+
+commit e027349a156e21a95bf124d62077f2847c03b158
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Apr 17 13:29:02 2024 +1000
+
+    Update Terms_and_Conditions.txt
+    
+    minor spelling changes
+
+commit c165280d1a129350d497117c6f09261fc45170cd
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Apr 17 13:27:45 2024 +1000
+
+    Update Terms_and_Conditions.txt
+    
+    Added group name and app name to T&C's
+    made edits
+
+commit 0d236460d81aae69effd091a89e1b110899970fd
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Apr 17 10:04:51 2024 +1000
+
+    Create Terms_and_Conditions.txt
+
+commit 3e7974a2bc3dd2aa633dd686be736e82eac593d7
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Tue Apr 16 02:01:18 2024 +1000
+
+    Updated buttons, added main-page as outline on Figma, styling adhering to low-fidelity prototype.
+
+commit 0d8d7a5a2319e708a865e291f5e1567d8c423122
+Author: Keane Asson <keane@asson.com.au>
+Date:   Mon Apr 15 21:09:45 2024 +1000
+
+    worked on updating the main-page
+
+commit 16d84e4c3841336146ee6c047cf01fd713fd51b0
+Author: Keane Asson <keane@asson.com.au>
+Date:   Mon Apr 15 20:33:57 2024 +1000
+
+    changed style to replicate that of figma, added application icon.
+
+commit 80769857a20f10dd678736d0ffcd5f2ef9f0f2d1
+Author: Keane Asson <keane@asson.com.au>
+Date:   Mon Apr 15 14:39:40 2024 +1000
+
+    refactored controller-classes.
+
+commit 48f752473b4a25d1271ed9942c63423d7a171e8d
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed Mar 27 14:11:58 2024 +1000
+
+    updated doc with images
+
+commit 61499f7bcc6da6348924f606032eb27ac44628c8
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed Mar 27 13:53:56 2024 +1000
+
+    Resolved conflict
+
+commit 06172c0a3cc1dac9cdbd94cc764d8df8a2b25b21
+Author: euvu <148684943+euvuu@users.noreply.github.com>
+Date:   Wed Mar 27 13:30:51 2024 +1000
+
+    Updated Requirements
+
+commit 65e39348fa0b867b923691641e12b7aa1843ddbf
+Merge: 68d0eb0 b9c7ba6
+Author: Christina Sirgunas <n10212477@qut.edu.au>
+Date:   Wed Mar 27 13:21:57 2024 +1000
+
+    christina first commit
+
+commit 68d0eb080d4193fe0251a0223329b38bcdf16504
+Author: Christina Sirgunas <n10212477@qut.edu.au>
+Date:   Wed Mar 27 13:20:29 2024 +1000
+
+    christina first commit
+
+commit b9c7ba621ac2004b759b9e0f06e03820ca7e916f
+Merge: 0556459 dd83bbf
+Author: Finnian Habberjam <n11600993@qut.edu.au>
+Date:   Wed Mar 27 13:04:19 2024 +1000
+
+    Finns first commit
+
+commit 0556459a325909e4c44e2ea0d64053e07bb4e2c2
+Author: Finnian Habberjam <n11600993@qut.edu.au>
+Date:   Wed Mar 27 13:03:23 2024 +1000
+
+    Finns first commit
+
+commit dd83bbf2fed1b9456d103df597f63b95f88351d8
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed Mar 27 13:01:14 2024 +1000
+
+    Corrected homework files
+
+commit b7259f7deb431604630d4c471e398b63dd547fbd
+Merge: e5c4de2 69b2d91
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed Mar 27 11:45:40 2024 +1000
+
+    Merge branch 'master' of https://github.com/KE4NE/CAB302 into dev
+    Updating dev branch with master branch commits
+
+commit e5c4de21cb07a785e6e282ac280bceec26dfb088
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Wed Mar 27 11:36:00 2024 +1000
+
+    Added helper class to simplify changing scenes, fixed css error
+
+commit 69b2d915941e46c34c4f0117edb27f928e4fbab8
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Mar 27 07:28:19 2024 +1000
+
+    Update README.md
+
+commit 94a7dbd54ae19dc78f378e26ac44e3d5ef9991eb
+Author: Keane Asson <keane@asson.com.au>
+Date:   Wed Mar 27 01:12:16 2024 +1000
+
+    Updated doc based on onedrive doc
+
+commit fda72b647dae5a9ae321f0a0bef903a385f45d93
+Merge: d94caa7 6df58b5
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Mar 25 00:29:45 2024 +1000
+
+    Merge branch 'dev' of https://github.com/KE4NE/CAB302 into dev
+
+commit d94caa797863e7003dbf881e6098a819baac6017
+Merge: b9817aa 2c747e5
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Mon Mar 25 00:28:44 2024 +1000
+
+    Merge branch 'master' of https://github.com/KE4NE/CAB302 into dev
+
+commit 6df58b5e192c9b052188f4da6c4ccc084cd11c9d
+Author: Keane Asson <keane@asson.com.au>
+Date:   Mon Mar 25 00:25:37 2024 +1000
+
+    Added more files related to previous commmit
+
+commit 31a31bbdea317469d179edef4e97627b9eb43333
+Author: Keane Asson <keane@asson.com.au>
+Date:   Mon Mar 25 00:25:06 2024 +1000
+
+    Added empty main page, connected menus.
+
+commit f88585248c464225aabaf608de324e43e9d3886b
+Author: Keane Asson <keane@asson.com.au>
+Date:   Sun Mar 24 21:19:15 2024 +1000
+
+commit 919273b2cead44c70f1f711d0e6851b1631022a0
+Author: Keane Asson <keane@asson.com.au>
+Date:   Sun Mar 24 20:01:34 2024 +1000
+
+    Changed stylesheets, added new fxml file.
+
+commit b9817aa119c6b0c8b3b91472519cee6fb9c703ae
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sun Mar 24 12:32:31 2024 +1000
+
+    Added empty stylesheet
+
+commit 2c747e5ae6a3eb88b6d155aa83fb900a93d3de86
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Sun Mar 24 09:40:47 2024 +1000
+
+    Create README.md
+
+commit 6e985432962a91d4de682f020d8d62ce9871dd62
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sun Mar 24 01:04:40 2024 +1000
+
+    Updated default application, added basic sign-in screen.
+
+commit edbccebaa555a407cd1ca6bd812c00ffa991d2ab
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sat Mar 23 21:15:38 2024 +1000
+
+    Updated branch with GUI files
+
+commit 0df7489eead62f502d4452e9c1d5c255e38276f6
+Author: Keane Asson <keane.asson@connect.qut.edu.au>
+Date:   Sat Mar 23 19:11:49 2024 +1000
+
+    Added assessment related documents into brnach
+
+commit 8a386efd0904fdc16956100770a61dd162b9525b
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Sun Mar 17 12:05:01 2024 +1000
+
+    Added group members
+
+commit 8eb9f6bef0bc5fea52819dcfaae578ac300e50cb
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Sun Mar 17 12:04:22 2024 +1000
+
+    Added group members
+
+commit af166e9cbf3c4cde7498c574111fc590b86b08b1
+Merge: e46cb22 7c3b1be
+Author: simonwegener <simonwegener0@gmail.com>
+Date:   Wed Mar 6 14:47:38 2024 +1000
+
+    Merge branch 'master' of https://github.com/KE4NE/CAB302
+    mrge
+
+commit 7c3b1be57b0263c697f2f43de322a24b13093114
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Mar 6 14:31:18 2024 +1000
+
+    Delete .idea directory
+
+commit 156aa96b00ec7470f5719c9a176ed575029a8906
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Mar 6 14:31:08 2024 +1000
+
+    Delete src directory
+
+commit e46cb22824c20ccaa0af707799fc044315c7e784
+Author: simonwegener <simonwegener0@gmail.com>
+Date:   Wed Mar 6 14:23:54 2024 +1000
+
+    stuff
+
+commit 190fa75b085c7e106a34bbb9e3c245b2f1a6f4f1
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Mar 6 14:15:33 2024 +1000
+
+    Create Main.java
+
+commit 4d530a60c940c2d5c49ceddede322aafc953b874
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Mar 6 14:08:10 2024 +1000
+
+    Delete DISCORD LINK
+    
+    no longer needed
+
+commit 5d47b9b7192cb95ec558f2a7fb6133d3b5a6aead
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Mar 6 14:03:59 2024 +1000
+
+    Delete .gitignore
+
+commit 8c27a22e283090d06a01db536d32f5550e78800b
+Author: simonwegener <81657689+simonwegener@users.noreply.github.com>
+Date:   Wed Mar 6 14:03:23 2024 +1000
+
+    added discord link
+
+commit 51b90aa275e2cbecadf3d81a59850ae2cf951aa7
+Author: Mitchell Lohmann <144869965+Mitchell-Lohmann@users.noreply.github.com>
+Date:   Wed Mar 6 14:00:26 2024 +1000
+
+    Update README.md
+
+commit 58998870e40255511c2f4f7251d0658d7a0035e2
+Merge: 2463f77 1f92bf0
+Author: Mitchell Lohmann <mitchell.lohmann@outlook.com>
+Date:   Wed Mar 6 13:58:08 2024 +1000
+
+    Merge branch 'master' of https://github.com/KE4NE/CAB302
+
+commit 1f92bf0f4a913d4b21771133c3c3c29771161c5f
+Author: simonwegener <simonwegener0@gmail.com>
+Date:   Wed Mar 6 13:59:58 2024 +1000
+
+    discord link added for real this time
+
+commit 2463f779f56040eea115d5636b9a03048c0886e0
+Author: Mitchell Lohmann <mitchell.lohmann@outlook.com>
+Date:   Wed Mar 6 13:58:05 2024 +1000
+
+    Commit of README file.
+
+commit cf2152511ed08f775f2c0d37afb20b6b5c19e2a6
+Author: simonwegener <simonwegener0@gmail.com>
+Date:   Wed Mar 6 13:57:40 2024 +1000
+
+    Added discord link
